@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Struktur Organisasi - OrgName</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#b22b1d",
+                      "inverse-on-surface": "#313030",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary-container": "#474746",
+                      "error-container": "#93000a",
+                      "primary": "#ffb4a8",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary-container": "#b7b5b4",
+                      "secondary-fixed": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "on-tertiary": "#2f3131",
+                      "on-surface-variant": "#e2bfb9",
+                      "surface-container-highest": "#353534",
+                      "surface-container": "#201f1f",
+                      "on-background": "#e5e2e1",
+                      "tertiary-fixed": "#e2e2e2",
+                      "tertiary": "#c6c6c7",
+                      "on-secondary": "#313030",
+                      "on-tertiary-container": "#a6a7a8",
+                      "tertiary-container": "#3b3d3d",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "surface-bright": "#3a3939",
+                      "on-primary-fixed": "#410000",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#ffb4a8",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface": "#131313",
+                      "on-primary-container": "#ff8371",
+                      "surface-dim": "#131313",
+                      "background": "#131313",
+                      "on-primary": "#690000",
+                      "primary-container": "#800000",
+                      "on-secondary-fixed-variant": "#474746",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline": "#a98984",
+                      "on-error-container": "#ffdad6",
+                      "outline-variant": "#5a413d",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "secondary": "#c8c6c5",
+                      "primary-fixed": "#ffdad4",
+                      "surface-variant": "#353534"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-sm": "12px",
+                      "stack-md": "24px",
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "stack-lg": "48px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "button": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e5e2e1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+        }
+        .glass-card:hover {
+            box-shadow: 0 0 20px rgba(128, 0, 0, 0.3);
+            border-color: rgba(128, 0, 0, 0.5);
+        }
+        .leadership-card {
+            background: rgba(128, 0, 0, 0.1);
+            border: 1px solid rgba(128, 0, 0, 0.3);
+        }
+        .leadership-card:hover {
+            box-shadow: 0 0 30px rgba(128, 0, 0, 0.5);
+            border-color: rgba(255, 180, 168, 0.5);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-lg text-headline-lg font-bold text-primary tracking-tighter" href="#">OrgName</a>
+<!-- Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Beranda</a>
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Sejarah</a>
+<a class="font-label-md text-label-md text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-1 after:h-1 after:bg-primary after:rounded-full px-3 py-2 hover:bg-white/5 transition-all duration-300 active:scale-95" href="#">Aparatur</a>
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Media &amp; Info</a>
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-lg" href="#">Aspirasi</a>
+</div>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<button class="bg-primary-container text-white font-button text-button px-6 py-3 rounded-full hover:bg-inverse-primary transition-colors active:scale-95">Hubungi Kami</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<section class="mb-stack-lg text-center md:text-left flex flex-col md:flex-row justify-between items-end gap-stack-md">
+<div class="max-w-2xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-sm">Aparatur Organisasi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Para pemimpin dan penggerak di balik visi dan misi organisasi kami. Dedikasi tinggi untuk inovasi dan keunggulan.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface hover:bg-white/5 transition-colors font-button text-button">Unduh Struktur</button>
+</div>
+</section>
+<!-- Leadership (Bento Grid Style) -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-2">
+<span class="w-8 h-1 bg-primary rounded-full"></span>
+                Dewan Pimpinan
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Chairman Card (Spans 8 cols on desktop) -->
+<div class="md:col-span-8 glass-card leadership-card rounded-xl p-stack-md flex flex-col md:flex-row items-center md:items-start gap-stack-md transition-all duration-300 group cursor-pointer">
+<div class="w-48 h-48 rounded-lg overflow-hidden shrink-0 border border-primary/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional studio portrait of a young male student leader wearing a sleek dark blazer over a maroon shirt. The lighting is dramatic and cinematic, creating soft shadows on one side of the face. The background is a minimalist, slightly textured dark grey surface. He has a confident, visionary expression. The image exudes premium quality, high-end professional photography, and corporate elegance suitable for a top-tier executive profile in a modern tech-driven student organization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh4MC5GyPee5HIin4Jouwo23qbfctamysbWY2GnZ_70Aqb0UVZYHc0-maMfRWweFmr0-rIa-pmTRPXGSRnul0pojnmKOGdSPDGYlUaAzq6I7-OWttKgzkqOVd6mmGxGymrCXJWKoPZzPX4_BoGZyEn057D1E2T-hKDM03EbzjKnIAP8i_e9QV3SrD0uL6BeiBcp2kRTPzb1m-TXCIxnlZXpINXTzf_IhshoWoZla8mZ4ZD9p2vJ0qa"/>
+</div>
+<div class="flex-1 text-center md:text-left">
+<span class="inline-block bg-primary-container text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Ketua Umum</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Budi Santoso</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">"Memimpin dengan visi, bergerak dengan aksi nyata untuk kemajuan bersama."</p>
+<div class="flex items-center justify-center md:justify-start gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</div>
+<!-- Vice Chairman Card (Spans 4 cols on desktop) -->
+<div class="md:col-span-4 glass-card leadership-card rounded-xl p-stack-md flex flex-col items-center text-center transition-all duration-300 group cursor-pointer">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-stack-sm border border-primary/20">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional headshot of a young female student leader in a dark, minimalist setting. She is wearing a modern, tailored dark suit. Soft, cool lighting highlights her features, while a subtle maroon rim light defines her silhouette against the deep black background. She smiles warmly but professionally. The photography is sharp, high-contrast, and evokes a sense of modern corporate sophistication and approachable leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFduMPlvaC2kBoWnWpDP1Sgz08iXQSADTF3WBnqsQzVo2hcPf1GXrPp9L0rjWs5nvGtn2-EgF5TP2Rbh0zza6tOb7OrZJNgdkBQ0Pm1SKUN5YFO-lIt3B87i4x0PmYpLMekCE-dAS1ajfXc5WsG0-QkGNHAEvWiQFOwPWVIaT2v4_sxYxYk8Qk278iRnHqNq8sbeqVdyho8BBzW4vqxA9VKw7LrZ4Y70yKmU1FJyDtgcYDGeNgRJC-"/>
+</div>
+<span class="inline-block bg-surface-container-highest text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-2 border border-primary/20">Wakil Ketua</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Siti Aminah</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Fokus pada operasional dan harmoni internal.</p>
+</div>
+</div>
+</section>
+<!-- Departments Grid -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md flex items-center gap-2">
+<span class="w-8 h-1 bg-surface-container-highest rounded-full"></span>
+                Divisi &amp; Departemen
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Divisi 1 -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col items-center text-center transition-all duration-300 group cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-stack-sm border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A sleek, low-key portrait of a male student director. He wears a dark, modern turtleneck. The lighting is moody and cinematic, with a soft white key light and deep shadows on a pure black background. The image style is highly polished, professional, and minimalist, suited for a high-end creative agency profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6d36krtPV_njvyofTs3qEdf9by2ArX1lnVsAGQKS0asGVV21mZcz_kBOEF9s1jdcgvC-6S8GgsS0sCiH2J40MOXPRkieGP19JXTu_El20AoHScfjxb_3eIa_IFZvggTTKjOllGgFKxTevbf47aV8S8tNRzyY6zp8DxfpQCLhkylqfdhsOwD3E8HmtXj6AIyQr_sqBlBOALaOIeRZz_hzWlnitS2BpZVstNWeSfQnzaHUVRnJ3WP1e"/>
+</div>
+<span class="text-xs font-label-md text-primary uppercase tracking-wider mb-1">Kepala Divisi</span>
+<h4 class="font-button text-button text-on-surface mb-1">Ahmad Riza</h4>
+<p class="text-sm font-body-md text-on-surface-variant mb-4">Pengembangan SDM</p>
+<div class="w-full h-px bg-white/5 my-2"></div>
+<div class="flex gap-2 justify-center w-full mt-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 1"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 2"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center text-[10px] text-on-surface-variant">+3</div>
+</div>
+</div>
+<!-- Divisi 2 -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col items-center text-center transition-all duration-300 group cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-stack-sm border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A stylish, professional portrait of a female student director in a dimly lit, modern environment. She wears a crisp, dark blazer. A subtle geometric pattern is barely visible in the dark background. The lighting is soft and focused, emphasizing her focused expression. The aesthetic is premium, dark-mode, and highly corporate yet modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1vj2YZiEPCUYyg_0ttntVTxlIqS2jBRISXNMpSoBolVnNe-z2Pa1halErRuVDawDJrWEpphIUEq18XA3_iwamxlq-TDr3jaLU85D283MVxvoZDqJLpvf1RS2XpxZyeOMVoz5hvxw_ayGhCGWggXoaS6ysSkVJa6k7CuLbxMt-f9YFnqXiAFdQkh7RGZlnoxyEAWwZ4Yp-6xLskQAkadafJXbhJZStpdB30DdyOIGO9xxDm4AbtrRc"/>
+</div>
+<span class="text-xs font-label-md text-primary uppercase tracking-wider mb-1">Kepala Divisi</span>
+<h4 class="font-button text-button text-on-surface mb-1">Dina Mariana</h4>
+<p class="text-sm font-body-md text-on-surface-variant mb-4">Humas &amp; Media</p>
+<div class="w-full h-px bg-white/5 my-2"></div>
+<div class="flex gap-2 justify-center w-full mt-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 1"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 2"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center text-[10px] text-on-surface-variant">+5</div>
+</div>
+</div>
+<!-- Divisi 3 -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col items-center text-center transition-all duration-300 group cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-stack-sm border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A high-contrast, modern headshot of a young man, a student leader. He is dressed smartly in dark attire. The background is completely black, with dramatic rim lighting highlighting his shoulders and the side of his face. The portrait looks like it belongs on a luxury tech company's 'About Us' page. Sleek, serious, and visionary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaflZRSa7gYKDIVodkPtG1ZdZQD5cMswFU19myHPom_7Zv8Qm3zMPYDp32DlzYqoDM9xSdY-WwvROyR_L2esF6I7OGYejleRlcSH6AyMVfqxwQRfdWPIil0PPSEhjH3oyonpzkassc5KeK1Z8kC4NJopWWFKWbXYFxNm47dq0losVUPtG64ys8HzWD_T5qeDSym5Hz_zjLFhVrqmuAC81S6axpxdiJ9UVdBDrg9_omK_iN-2Wmkwis"/>
+</div>
+<span class="text-xs font-label-md text-primary uppercase tracking-wider mb-1">Kepala Divisi</span>
+<h4 class="font-button text-button text-on-surface mb-1">Rizky Pratama</h4>
+<p class="text-sm font-body-md text-on-surface-variant mb-4">Riset &amp; Teknologi</p>
+<div class="w-full h-px bg-white/5 my-2"></div>
+<div class="flex gap-2 justify-center w-full mt-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 1"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center text-[10px] text-on-surface-variant">+2</div>
+</div>
+</div>
+<!-- Divisi 4 -->
+<div class="glass-card rounded-xl p-stack-md flex flex-col items-center text-center transition-all duration-300 group cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-stack-sm border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A professional, sleek portrait of a young woman leading a student organization. She is wearing dark, minimalist clothing. The setting is dark with a subtle maroon gradient in the out-of-focus background. The lighting is soft and flattering, creating a high-end, premium aesthetic indicative of a forward-thinking, modern leadership team." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIER0NKOUrJBM7_ROFls8KLii0gjSqpdav5wJoW4foCfQWkKuxhIsA6FPFLlFkhg6E_R6e0UGnRZDQ_LaFMna2yTHY_4owEhO5ZX0gPbwfQtRHWB0fGeKU4ybCt-dRogcJ9NyL7yKu3yV9NRzvtdHtdhMNNl7CLPNMh5rj42Led8hk15BfW2quAag6_-HKFurjHCx-dTgXHPqDz4Ydgc9SDWbw7SeO6kfiUrZALhyBhbG3nAxG3ULM"/>
+</div>
+<span class="text-xs font-label-md text-primary uppercase tracking-wider mb-1">Kepala Divisi</span>
+<h4 class="font-button text-button text-on-surface mb-1">Lestari Putri</h4>
+<p class="text-sm font-body-md text-on-surface-variant mb-4">Keuangan &amp; Administrasi</p>
+<div class="w-full h-px bg-white/5 my-2"></div>
+<div class="flex gap-2 justify-center w-full mt-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 1"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10" title="Anggota 2"></div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center text-[10px] text-on-surface-variant">+1</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-lowest border-t border-white/5 flat">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-stack-md max-w-container-max mx-auto">
+<!-- Brand Logo in Footer -->
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                OrgName
+            </div>
+<!-- Footer Links -->
+<div class="flex gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Instagram</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Twitter</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#">Contact Us</a>
+</div>
+<!-- Copyright -->
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Student Organization. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>

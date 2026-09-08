@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Admin HIMASISFO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-[#F5F5F5] font-body-md text-on-surface flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="bg-on-secondary-fixed dark:bg-black text-primary-fixed dark:text-primary-fixed-dim font-label-md text-label-md fixed left-0 top-0 h-full w-[280px] shadow-lg flex flex-col h-full py-sm z-50">
+<div class="px-6 py-8 flex flex-col gap-4">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A professional logo design for an Information Systems student organization. The logo features a combination of academic symbols like a shield or book interlocked with digital elements like circuit lines or nodes. The color palette primarily uses deep maroon and sleek black on a pristine white background. The aesthetic is clean, modern, and highly legible, suitable for a university-level association. High contrast and flat vector style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5u-6Uj0StHKAlw_CrtIy0ZPZLqfhdIcXyYeZ3DBa_KEaDEcaZ1WrR5NcGt4DGb5E3CGT3GU5wf2RcKrFEOiTrbMLK4qGeQ7CNDNYXMjYO7X5q-5ToIUoG0HO7_u7ScJ_JfHR-BARkVMwpedz6bM19Sz234PzMNK3WCFJ93IZjI8TXd7H0isSp1Z7opM0u5LqqlLU1FjTEGAy1_rl9cyZOwN5Rv2cQ9FteflWqO5zf69dOYnTwkCYN"/>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h1>
+<p class="text-secondary-fixed-dim mt-1">Admin Portal</p>
+</div>
+</div>
+<button class="mx-4 my-6 bg-primary text-white rounded-md py-3 px-4 font-label-md text-label-md hover:bg-[#4D0000] transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">add</span>
+            Create New Post
+        </button>
+<nav class="flex-1 mt-4">
+<ul class="flex flex-col gap-2">
+<li>
+<a class="bg-primary dark:bg-primary-container text-white border-l-4 border-primary-fixed px-4 py-3 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">groups</span>
+                        Members
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">school</span>
+                        Academic
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                        Events
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">payments</span>
+                        Finances
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">settings</span>
+                        Settings
+                    </a>
+</li>
+</ul>
+</nav>
+<div class="mt-auto pt-6 border-t border-secondary-fixed-dim/20">
+<ul class="flex flex-col gap-2">
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">help</span>
+                        Support
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined">logout</span>
+                        Logout
+                    </a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 ml-[280px] flex flex-col">
+<!-- TopNavBar Admin -->
+<header class="bg-surface dark:bg-surface-container text-primary dark:text-primary-fixed font-label-md text-label-md fixed top-0 right-0 left-[280px] h-16 border-b border-outline-variant shadow-sm flex justify-between items-center px-gutter z-40">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                Admin Console
+            </div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+<div class="h-8 w-px bg-outline-variant mx-2"></div>
+<div class="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+<div class="text-right hidden md:block">
+<p class="font-label-md text-label-md text-on-surface">Admin User</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Superadmin</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center font-bold">
+                         A
+                     </div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<main class="flex-1 mt-16 p-gutter w-full">
+<div class="max-w-container-max mx-auto">
+<div class="mb-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Overview</h2>
+<p class="text-on-surface-variant mt-1 font-body-sm text-body-sm">Welcome back, here's what's happening today.</p>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<!-- Stat 1 -->
+<div class="bg-white rounded-lg p-6 border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)] transition-shadow duration-300 group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-md text-label-md text-secondary">Total Agenda</h3>
+<div class="p-2 bg-primary-container/10 rounded-md text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface">24</div>
+<div class="mt-2 flex items-center gap-1 text-sm text-emerald-600 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+3 this month</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-white rounded-lg p-6 border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)] transition-shadow duration-300 group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-md text-label-md text-secondary">Laporan Terisi</h3>
+<div class="p-2 bg-primary-container/10 rounded-md text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface">156</div>
+<div class="mt-2 flex items-center gap-1 text-sm text-emerald-600 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12% vs last week</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-white rounded-lg p-6 border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)] transition-shadow duration-300 group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-md text-label-md text-secondary">Aspirasi Masuk</h3>
+<div class="p-2 bg-primary-container/10 rounded-md text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface">89</div>
+<div class="mt-2 flex items-center gap-1 text-sm text-amber-600 font-medium">
+<span class="material-symbols-outlined text-sm">pending_actions</span>
+<span>14 pending review</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-white rounded-lg p-6 border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)] transition-shadow duration-300 group">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-md text-label-md text-secondary">Bug Aktif</h3>
+<div class="p-2 bg-primary-container/10 rounded-md text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bug_report</span>
+</div>
+</div>
+<div class="font-display-lg text-display-lg text-on-surface">3</div>
+<div class="mt-2 flex items-center gap-1 text-sm text-rose-600 font-medium">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Needs attention</span>
+</div>
+</div>
+</div>
+<!-- Recent Activity Table -->
+<div class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="px-6 py-5 border-b border-[#E0E0E0] flex justify-between items-center bg-white">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Activity</h3>
+<button class="text-primary font-label-md text-label-md hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F5F5F5] border-b border-[#E0E0E0]">
+<th class="px-6 py-4 font-label-md text-label-md font-semibold text-secondary">User</th>
+<th class="px-6 py-4 font-label-md text-label-md font-semibold text-secondary">Action</th>
+<th class="px-6 py-4 font-label-md text-label-md font-semibold text-secondary">Module</th>
+<th class="px-6 py-4 font-label-md text-label-md font-semibold text-secondary">Status</th>
+<th class="px-6 py-4 font-label-md text-label-md font-semibold text-secondary">Time</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<tr class="border-b border-[#E0E0E0] hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600 text-xs">BP</div>
+<span>Budi Perkasa</span>
+</td>
+<td class="px-6 py-4">Submitted Laporan LPJ</td>
+<td class="px-6 py-4 text-on-surface-variant">Finances</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#FFF9C4] text-[#827717]">
+                                            Pending
+                                        </span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">10 mins ago</td>
+</tr>
+<tr class="border-b border-[#E0E0E0] hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600 text-xs">SA</div>
+<span>Siti Aminah</span>
+</td>
+<td class="px-6 py-4">Created Event "Tech Talk"</td>
+<td class="px-6 py-4 text-on-surface-variant">Events</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#E8F5E9] text-[#2E7D32]">
+                                            Published
+                                        </span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">1 hour ago</td>
+</tr>
+<tr class="border-b border-[#E0E0E0] hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600 text-xs">RD</div>
+<span>Rina Damayanti</span>
+</td>
+<td class="px-6 py-4">Posted new Aspirasi</td>
+<td class="px-6 py-4 text-on-surface-variant">Aspirasi</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#FCE4EC] text-[#800000]">
+                                            New
+                                        </span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">3 hours ago</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600 text-xs">Admin</div>
+<span>System Admin</span>
+</td>
+<td class="px-6 py-4">Updated Privacy Policy</td>
+<td class="px-6 py-4 text-on-surface-variant">Settings</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#F5F5F5] text-[#424242]">
+                                            Draft
+                                        </span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">Yesterday</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

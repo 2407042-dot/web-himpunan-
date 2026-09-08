@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pengaturan Website - Admin HIMASISFO</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#570000",
+                    "tertiary-container": "#0021b9",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "on-surface-variant": "#5a413d",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#261816",
+                    "secondary-fixed": "#e5e2e1",
+                    "primary-fixed": "#ffdad4",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#ffedea",
+                    "surface-bright": "#fff8f6",
+                    "inverse-surface": "#3d2d2a",
+                    "on-primary-fixed-variant": "#8f0f07",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface": "#fff8f6",
+                    "surface-variant": "#f7ddd8",
+                    "secondary-container": "#e5e2e1",
+                    "primary-container": "#800000",
+                    "background": "#fff8f6",
+                    "on-tertiary-fixed-variant": "#1830c2",
+                    "outline-variant": "#e2bfb9",
+                    "secondary": "#5f5e5e",
+                    "surface-container-highest": "#f7ddd8",
+                    "on-tertiary-container": "#94a0ff",
+                    "surface-container-low": "#fff0ee",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "on-secondary-fixed-variant": "#474646",
+                    "tertiary-fixed": "#dfe0ff",
+                    "on-primary-fixed": "#410000",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-tint": "#b22b1d",
+                    "on-background": "#261816",
+                    "tertiary": "#00137f",
+                    "on-primary-container": "#ff8371",
+                    "on-secondary-container": "#656464",
+                    "surface-container": "#ffe9e6",
+                    "on-tertiary-fixed": "#000c61",
+                    "inverse-primary": "#ffb4a8",
+                    "surface-dim": "#eed4d0",
+                    "tertiary-fixed-dim": "#bcc2ff",
+                    "outline": "#8e706c",
+                    "surface-container-high": "#fde2de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "xl": "64px",
+                    "xs": "4px",
+                    "container-max": "1200px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Poppins"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Poppins"
+                    ],
+                    "headline-sm": [
+                            "Poppins"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Poppins"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Poppins"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen flex">
+<!-- SideNavBar (Admin Fixed Sidebar) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-full w-[280px] bg-on-secondary-fixed dark:bg-black shadow-lg flex-col py-sm z-50">
+<!-- Header -->
+<div class="px-gutter mb-xl flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center">
+<img class="w-8 h-8 object-contain" data-alt="A small, professional logo mark featuring a stylized letter H interwoven with technological motifs like circuits or nodes, in deep maroon and white colors, symbolizing an Information Systems organization. The style is modern, minimal, and vector-based." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr6DbRSszGgJ5ObEVGPYC5KcPbnCUvTLsjzl7kBN1c9f3Q8RtMXEGT_8peQt6vm6pHzv6m4tTqNVg4IbXxNr3GO5lSjz1lzJL6JwL8VIWVSRXjprimLAfqdlABcG-_eiG2tLi6_SGtntoHe9xFuOw0ud0PSEEVEqP_Alg5hQXi38rdgr5PnIIEwyf3_UEurKViighSBq4D2uCzL8G2B7ksyMBpQygOJny_DrN20QJrmDvs-OXnqwsu"/>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h1>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim">Admin Portal</p>
+</div>
+</div>
+<!-- Main Navigation -->
+<nav class="flex-1 px-sm">
+<ul class="space-y-base">
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed transition-colors">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed transition-colors">groups</span>
+                        Members
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed transition-colors">school</span>
+                        Academic
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed transition-colors">calendar_today</span>
+                        Events
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed transition-colors">payments</span>
+                        Finances
+                    </a>
+</li>
+<li>
+<a class="bg-primary dark:bg-primary-container text-white border-l-4 border-primary-fixed px-4 py-3 flex items-center gap-3 font-label-md text-label-md active:translate-x-1 transition-transform rounded-r-full" href="#">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">settings</span>
+                        Settings
+                    </a>
+</li>
+</ul>
+</nav>
+<!-- CTA -->
+<div class="px-gutter mt-auto mb-md">
+<button class="w-full bg-primary-fixed text-on-primary-fixed hover:bg-white transition-colors py-3 rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                Create New Post
+            </button>
+</div>
+<!-- Footer Navigation -->
+<div class="px-sm pt-md border-t border-secondary-fixed/20">
+<ul class="space-y-base">
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+                        Support
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 font-label-md text-label-md hover:bg-white/5 transition-all rounded-r-full" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                        Logout
+                    </a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col min-w-0 md:ml-[280px]">
+<!-- TopNavBar (Admin Header) -->
+<header class="fixed top-0 right-0 left-0 md:left-[280px] h-16 bg-surface dark:bg-surface-container border-b border-outline-variant shadow-sm z-40">
+<div class="flex justify-between items-center px-gutter h-full">
+<!-- Mobile Menu Button & Product Name -->
+<div class="flex items-center gap-sm">
+<button class="md:hidden p-2 text-on-surface hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Admin Console</h2>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center gap-sm">
+<div class="flex items-center gap-xs border-r border-outline-variant pr-sm mr-sm">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-opacity cursor-pointer active:opacity-70 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-opacity cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+<button class="flex items-center gap-2 p-1 hover:bg-surface-container-high rounded-full transition-colors pr-3">
+<img class="w-8 h-8 rounded-full object-cover border border-outline-variant" data-alt="A highly professional portrait photograph of a confident academic administrator or senior student in a modern office setting. The lighting is crisp and natural, highlighting a friendly yet authoritative expression. They are wearing smart-casual business attire suitable for a modern educational institution. Depth of field is shallow, blurring the background slightly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXXW5hMh8LfQaYL4lkZagcLQf93BnvUx2a0AXWemlUrko-Qp0OmVstqZwJfm5I_VdTCWWyN5QIJoqH8S1C6wkZvzhUha3kHAn5U6sVS1CnKrgZTxp-V9oFhr-Ktcb56L5PjTlf0qzjT2PTZ-yctwFYSYiTw5nhkt1nKqev-EMV0OSqCn6ZLconHW68SIyCG6rYCwRIhz7NcXgYihGhLzSSNRL7dN55-NZpd9NDk6renoiw4hbkOXXu"/>
+<span class="font-label-md text-label-md text-on-surface hidden lg:block">Admin User Profile</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant hidden lg:block">expand_more</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 pt-16 p-gutter md:p-xl overflow-auto bg-[#F5F5F5]">
+<div class="max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="mb-xl">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Website Settings</h1>
+<p class="font-body-md text-body-md text-secondary">Manage the public-facing identity and core information of the HIMASISFO portal.</p>
+</div>
+<!-- Settings Form Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md">
+<!-- Main Form Section -->
+<div class="lg:col-span-2 space-y-md">
+<!-- General Info Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_8px_rgba(0,0,0,0.08)] p-md hover:shadow-[0_8px_16px_rgba(128,0,0,0.15)] transition-shadow duration-300">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-sm mb-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+                                General Information
+                            </h3>
+<form class="space-y-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1" for="site-title">Site Title</label>
+<input class="w-full bg-surface-container-lowest border border-[#E0E0E0] rounded-md px-3 py-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="site-title" type="text" value="HIMASISFO - Himpunan Mahasiswa Sistem Informasi"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1" for="site-tagline">Tagline</label>
+<input class="w-full bg-surface-container-lowest border border-[#E0E0E0] rounded-md px-3 py-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="site-tagline" type="text" value="Connecting Students, Advancing Technology"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1" for="site-description">Site Description (Meta)</label>
+<textarea class="w-full bg-surface-container-lowest border border-[#E0E0E0] rounded-md px-3 py-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-y" id="site-description" rows="4">Official website of HIMASISFO, the Information Systems Student Association. Discover our programs, events, and academic resources.</textarea>
+<p class="font-label-sm text-label-sm text-secondary mt-1">This description appears in search engine results.</p>
+</div>
+</form>
+</div>
+<!-- Social Media Links Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_8px_rgba(0,0,0,0.08)] p-md hover:shadow-[0_8px_16px_rgba(128,0,0,0.15)] transition-shadow duration-300">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-sm mb-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">share</span>
+                                Social Media Links
+                            </h3>
+<div class="space-y-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">photo_camera</span>
+</div>
+<div class="flex-1">
+<label class="sr-only" for="instagram-url">Instagram URL</label>
+<input class="w-full bg-surface-container-lowest border border-[#E0E0E0] rounded-md px-3 py-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="instagram-url" placeholder="https://instagram.com/himasisfo" type="url" value="https://instagram.com/himasisfo"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">language</span>
+</div>
+<div class="flex-1">
+<label class="sr-only" for="linkedin-url">LinkedIn URL</label>
+<input class="w-full bg-surface-container-lowest border border-[#E0E0E0] rounded-md px-3 py-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="linkedin-url" placeholder="https://linkedin.com/company/himasisfo" type="url"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">smart_display</span>
+</div>
+<div class="flex-1">
+<label class="sr-only" for="youtube-url">YouTube URL</label>
+<input class="w-full bg-surface-container-lowest border border-[#E0E0E0] rounded-md px-3 py-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="youtube-url" placeholder="https://youtube.com/@himasisfo" type="url"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar (Branding & Actions) -->
+<div class="space-y-md">
+<!-- Logo Upload Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_8px_rgba(0,0,0,0.08)] p-md hover:shadow-[0_8px_16px_rgba(128,0,0,0.15)] transition-shadow duration-300">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-sm mb-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">branding_watermark</span>
+                                Branding
+                            </h3>
+<div class="mb-sm">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Primary Logo</label>
+<div class="border-2 border-dashed border-[#E0E0E0] rounded-lg p-sm text-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="w-20 h-20 mx-auto mb-2 bg-surface rounded flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain" data-alt="The official circular crest logo of HIMASISFO on a transparent background. It features a deep maroon shield with a stylized white computer network node in the center, surrounded by bold, clean typography stating 'Himpunan Mahasiswa Sistem Informasi'. The design is crisp, academic, and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsCqWs5_LbWecXRm7aAlk2tDa5yXH27wYgq7t6dq9z4C39eopIruqGidW4QPyRsNqdeLHgACj3nHIAwEkt0vHD0CNYAJQP12dFtv_EfyRWWCPxH3hCQwc9S0_lVrw4Wn4cCEfsiM_FzZBvj2H4M1GYvhJqxOPDXebeHHJ5MYect6eY_5aSDG7CXF_fBvxphn1RmdLYzSH_GeMacq8ZfnvD2fwdHIXvFRFFyjGdwZCG17wfYdI9fI6J"/>
+</div>
+<p class="font-label-sm text-label-sm text-primary group-hover:underline">Click to change logo</p>
+<p class="font-label-sm text-label-sm text-secondary mt-1 text-xs">SVG, PNG, JPG (Max 2MB)</p>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Favicon</label>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 border border-outline-variant rounded overflow-hidden flex items-center justify-center bg-surface">
+<img class="w-8 h-8 object-contain" data-alt="A tiny, simplified version of the HIMASISFO network node icon, designed specifically to be legible at small sizes as a browser favicon. It is a solid maroon icon on a white square background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1nN3XlFUDlkqSJae_yoy3xIz9TwWBiEVFBsIz8aybgFh8i8wreIAlvxs2cWXFLS25i991vSu7nKGIN0UWortUDFNEoqIoyqLl2VJOgp0bJshN03Q-PQ9ftkS6WvNqT_kyO-QeFOOgbVqs8RClpshJQ6j4jdzLR3BfX-quu44LukMfD17BYqdLxVNRZ3fHV7iU_Nx5QITV4nmWiLu4hfCCXLN3N2yjPCPX-QymVF0oeE4xRr-PuRyV"/>
+</div>
+<button class="px-3 py-1.5 border border-primary text-primary hover:bg-primary/5 rounded font-label-md text-label-md transition-colors">
+                                        Update
+                                    </button>
+</div>
+</div>
+</div>
+<!-- Action Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_8px_rgba(0,0,0,0.08)] p-md sticky top-[88px]">
+<h3 class="font-headline-sm text-headline-sm text-on-surface border-b border-outline-variant pb-sm mb-sm">Publish Changes</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-sm">Unsaved changes will be lost if you leave this page.</p>
+<div class="flex flex-col gap-2">
+<button class="w-full bg-primary text-white hover:bg-[#4D0000] transition-colors py-2.5 rounded font-label-md text-label-md font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                                    Save Settings
+                                </button>
+<button class="w-full border border-primary text-primary hover:bg-primary/5 transition-colors py-2.5 rounded font-label-md text-label-md font-semibold">
+                                    Cancel
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

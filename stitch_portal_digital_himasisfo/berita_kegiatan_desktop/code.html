@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Berita &amp; Kegiatan - HIMASISFO</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#570000",
+                        "tertiary-container": "#0021b9",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-surface-variant": "#5a413d",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#261816",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ffedea",
+                        "surface-bright": "#fff8f6",
+                        "inverse-surface": "#3d2d2a",
+                        "on-primary-fixed-variant": "#8f0f07",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f6",
+                        "surface-variant": "#f7ddd8",
+                        "secondary-container": "#e5e2e1",
+                        "primary-container": "#800000",
+                        "background": "#fff8f6",
+                        "on-tertiary-fixed-variant": "#1830c2",
+                        "outline-variant": "#e2bfb9",
+                        "secondary": "#5f5e5e",
+                        "surface-container-highest": "#f7ddd8",
+                        "on-tertiary-container": "#94a0ff",
+                        "surface-container-low": "#fff0ee",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-fixed": "#dfe0ff",
+                        "on-primary-fixed": "#410000",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-tint": "#b22b1d",
+                        "on-background": "#261816",
+                        "tertiary": "#00137f",
+                        "on-primary-container": "#ff8371",
+                        "on-secondary-container": "#656464",
+                        "surface-container": "#ffe9e6",
+                        "on-tertiary-fixed": "#000c61",
+                        "inverse-primary": "#ffb4a8",
+                        "surface-dim": "#eed4d0",
+                        "tertiary-fixed-dim": "#bcc2ff",
+                        "outline": "#8e706c",
+                        "surface-container-high": "#fde2de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "xl": "64px",
+                        "xs": "4px",
+                        "container-max": "1200px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Poppins", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Poppins", "sans-serif"],
+                        "headline-sm": ["Poppins", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "headline-lg": ["Poppins", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Poppins", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .card-hover {
+                @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-primary/15;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F5F5F5] text-on-background min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-dim sticky top-0 w-full border-b-2 border-primary dark:border-primary-fixed shadow-sm dark:shadow-none z-50">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">
+                HIMASISFO
+            </div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary hover:bg-primary-container/10 transition-colors duration-200 active:scale-95 transition-transform px-3 py-2 rounded" href="#">Home</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary hover:bg-primary-container/10 transition-colors duration-200 active:scale-95 transition-transform px-3 py-2 rounded" href="#">About</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary px-3 py-2" href="#">Events</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary hover:bg-primary-container/10 transition-colors duration-200 active:scale-95 transition-transform px-3 py-2 rounded" href="#">Programs</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary hover:bg-primary-container/10 transition-colors duration-200 active:scale-95 transition-transform px-3 py-2 rounded" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-white border border-[#E0E0E0] rounded-full px-3 py-1 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-secondary text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-32 outline-none" placeholder="Search..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-[#4D0000] text-white px-4 py-2 rounded font-label-md text-label-md transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)]">Login</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-xl">
+<!-- Header & Filter -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-2">Berita &amp; Kegiatan</h1>
+<p class="text-secondary font-body-lg text-body-lg">Informasi terbaru seputar kegiatan dan prestasi Information Systems.</p>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<div class="relative w-full md:w-64">
+<select class="w-full appearance-none bg-white border border-[#E0E0E0] text-on-surface py-3 px-4 rounded font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<option value="all">Semua Kategori</option>
+<option value="akademik">Akademik</option>
+<option value="seminar">Seminar &amp; Workshop</option>
+<option value="lomba">Kompetisi</option>
+<option value="organisasi">Kegiatan Organisasi</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">expand_more</span>
+</div>
+</div>
+</div>
+<!-- News Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-xl">
+<!-- Card 1 -->
+<article class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] card-hover flex flex-col overflow-hidden">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A professional photograph of a crowded university auditorium during a tech seminar. The lighting is bright and modern, illuminating an engaged student audience and a speaker on stage pointing to a projected presentation about Information Systems. The color palette features institutional whites, grays, and prominent maroon accents reflecting a corporate-academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcIlHIrUYZfgAQzso8smoR071P6tSqVrEOyw-qFrbCSfrsASOjqnZ5gP3CvZLvFGsnVjzgY9jxAh_unUMvwe7iDeR4gRm8phdl4sHWVJxo7gB_pK9hK8C0jr6M6ZWjdAzje5K5B7f_SfDx6gs4nx7g0iK9nA9XUj_3rAQo73-MqMY8MGI6JXOcPuufakzjW38SsY6TWQDuQZkTBlwkd3oyCHJLsA2pgscP8qgfA8WKz9cDuMOEnN-8"/>
+<div class="absolute top-4 left-4 bg-[#F7DDD8] text-primary-container font-label-sm text-label-sm px-3 py-1 rounded-full">Seminar</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="text-secondary font-body-sm text-body-sm mb-2">12 Okt 2024</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3 line-clamp-2">Seminar Nasional: Masa Depan Artificial Intelligence dalam Bisnis</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 line-clamp-3 flex-grow">Membahas tren terkini pemanfaatan AI dalam optimasi proses bisnis perusahaan berskala besar bersama praktisi industri.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:text-[#4D0000] transition-colors mt-auto w-fit" href="#">
+                        Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] card-hover flex flex-col overflow-hidden">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of students collaboratively working on laptops in a modern, well-lit academic lab. The environment is clean and professional, with screens displaying lines of code and data charts. The lighting is soft and neutral, with subtle maroon structural elements in the background to reinforce the institutional identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtgp_s6SbNFLXuWDB5CKaqdSk8IarGlF1rD29KG8NzKljc2hqY2YtyTVFb7RNK5LeMDJ3J6MnTa3PdCEFjk3HW5bWuS0L3aHVkUrSNz3Z7zRILPTcU0tOu1mn2LqT76r35Bugsb2jB5v3gUlFcd_j5lb5oCdNRH_J-echfGrcVyfTtvbEX-Uo3UMTKCDehyV1jWckhxWiUQcfQSgmwxF6QZkRH_3VBOPmukPVwduHfBivbnO1cZfFr"/>
+<div class="absolute top-4 left-4 bg-[#E5E2E1] text-[#474646] font-label-sm text-label-sm px-3 py-1 rounded-full">Akademik</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="text-secondary font-body-sm text-body-sm mb-2">08 Okt 2024</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3 line-clamp-2">Pelatihan Analisis Data dengan Python untuk Mahasiswa Tingkat Akhir</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 line-clamp-3 flex-grow">Program intensif akhir pekan untuk membekali mahasiswa dengan keterampilan praktis data science sebelum memasuki dunia kerja.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:text-[#4D0000] transition-colors mt-auto w-fit" href="#">
+                        Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] card-hover flex flex-col overflow-hidden">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A dynamic action shot of a student holding a trophy on stage at a hackathon event. The scene is illuminated by dramatic stage lights, contrasting with the dark background. The student wears a maroon university jacket, and a digital scoreboard is visible behind them, capturing a moment of academic triumph and technological excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA27svrt5R5Idzv1lw7KKBTaR1nUVvhrM3m1OhO0ZrudLdR8FG9LsNycoeSmgN--RbQLHJw4M4lj_bCz_jsP4sYEd1wDYvrJJRTL_Gc5fNfZnxjVNiax3uuBBnpd0choT8BTFDVQShPg-HCMd20UTwWRN6a7yf0vXetsMQL1RR0A01QV7I2lPUuVE6tQvlss0DtZF_B2dRilOz0RIoXCGl_kQDYXW6HUXo7NNwxh1X-GvoCUobdB_Yl"/>
+<div class="absolute top-4 left-4 bg-[#FFDAD6] text-[#93000A] font-label-sm text-label-sm px-3 py-1 rounded-full">Kompetisi</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="text-secondary font-body-sm text-body-sm mb-2">05 Okt 2024</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3 line-clamp-2">Tim HIMASISFO Raih Juara 1 UI/UX Design di TechFest Nasional</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 line-clamp-3 flex-grow">Inovasi aplikasi manajemen limbah kampus mengantarkan delegasi mahasiswa Sistem Informasi meraih podium tertinggi.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:text-[#4D0000] transition-colors mt-auto w-fit" href="#">
+                        Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] card-hover flex flex-col overflow-hidden">
+<div class="relative h-48 w-full bg-[#E5E2E1] flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-secondary opacity-50">groups</span>
+<div class="absolute top-4 left-4 bg-[#E5E2E1] text-[#474646] font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Organisasi</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="text-secondary font-body-sm text-body-sm mb-2">28 Sep 2024</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3 line-clamp-2">Rapat Kerja Tahunan Pengurus Baru Periode 2024/2025</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 line-clamp-3 flex-grow">Perumusan program kerja strategis untuk satu tahun ke depan dengan fokus pada digitalisasi layanan kemahasiswaan.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:text-[#4D0000] transition-colors mt-auto w-fit" href="#">
+                        Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] card-hover flex flex-col overflow-hidden">
+<div class="relative h-48 w-full bg-[#FFE9E6] flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary opacity-30">code</span>
+<div class="absolute top-4 left-4 bg-[#F7DDD8] text-primary-container font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Workshop</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="text-secondary font-body-sm text-body-sm mb-2">20 Sep 2024</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3 line-clamp-2">Workshop Pengembangan Web Berbasis ReactJS</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 line-clamp-3 flex-grow">Kegiatan rutin divisi RnD untuk meningkatkan kompetensi teknis anggota dalam pengembangan antarmuka web modern.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:text-[#4D0000] transition-colors mt-auto w-fit" href="#">
+                        Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-white rounded-lg border border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.08)] card-hover flex flex-col overflow-hidden">
+<div class="relative h-48 w-full bg-[#E5E2E1] flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-secondary opacity-50">volunteer_activism</span>
+<div class="absolute top-4 left-4 bg-[#E5E2E1] text-[#474646] font-label-sm text-label-sm px-3 py-1 rounded-full border border-outline-variant">Organisasi</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="text-secondary font-body-sm text-body-sm mb-2">15 Sep 2024</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3 line-clamp-2">Pengabdian Masyarakat: Literasi Digital untuk UMKM Lokal</h2>
+<p class="text-on-surface-variant font-body-sm text-body-sm mb-6 line-clamp-3 flex-grow">Mahasiswa Sisfo terjun langsung membantu para pelaku UMKM mengadopsi pencatatan keuangan digital dan pemasaran online.</p>
+<a class="text-primary font-label-md text-label-md flex items-center gap-1 hover:text-[#4D0000] transition-colors mt-auto w-fit" href="#">
+                        Baca Selengkapnya <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-8">
+<button class="w-10 h-10 rounded border border-[#E0E0E0] bg-white flex items-center justify-center text-secondary hover:border-primary hover:text-primary transition-colors cursor-pointer" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded bg-primary text-white font-label-md text-label-md flex items-center justify-center shadow-sm">1</button>
+<button class="w-10 h-10 rounded border border-[#E0E0E0] bg-white text-secondary hover:border-primary hover:text-primary font-label-md text-label-md transition-colors flex items-center justify-center">2</button>
+<button class="w-10 h-10 rounded border border-[#E0E0E0] bg-white text-secondary hover:border-primary hover:text-primary font-label-md text-label-md transition-colors flex items-center justify-center">3</button>
+<span class="text-secondary px-1">...</span>
+<button class="w-10 h-10 rounded border border-[#E0E0E0] bg-white flex items-center justify-center text-secondary hover:border-primary hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed dark:bg-black w-full py-lg mt-auto border-t-4 border-primary shadow-flat">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-6 md:gap-0">
+<div class="font-headline-sm text-headline-sm text-primary-fixed text-center md:text-left">
+                © 2024 HIMASISFO. All rights reserved.
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-secondary-fixed-dim hover:text-primary-fixed transition-colors font-body-sm text-body-sm" href="#">Privacy Policy</a>
+<a class="text-secondary-fixed-dim hover:text-primary-fixed transition-colors font-body-sm text-body-sm" href="#">Terms of Service</a>
+<a class="text-secondary-fixed-dim hover:text-primary-fixed transition-colors font-body-sm text-body-sm" href="#">Contact Us</a>
+<a class="text-secondary-fixed-dim hover:text-primary-fixed transition-colors font-body-sm text-body-sm" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</body></html>

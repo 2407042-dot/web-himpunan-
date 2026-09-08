@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manajemen Agenda - Admin Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+      </style>
+</head>
+<body class="bg-gray-100 text-on-surface font-body-md h-screen overflow-hidden flex">
+<!-- SideNavBar -->
+<aside class="bg-on-secondary-fixed dark:bg-black text-primary-fixed dark:text-primary-fixed-dim font-label-md text-label-md fixed left-0 top-0 h-full w-[280px] shadow-lg flex flex-col h-full py-sm z-20">
+<div class="px-6 py-6 mb-4">
+<h1 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h1>
+<p class="text-secondary-fixed-dim font-body-sm text-body-sm mt-1">Admin Portal</p>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-primary-container text-white py-2 px-4 rounded-md font-label-md hover:bg-[#4D0000] transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Create New Post
+            </button>
+</div>
+<nav class="flex-1 overflow-y-auto space-y-1">
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+                Members
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+                Academic
+            </a>
+<a class="bg-primary dark:bg-primary-container text-white border-l-4 border-primary-fixed px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                Events
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                Finances
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto px-4 py-4 space-y-1 border-t border-gray-800">
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Support
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="ml-[280px] flex-1 flex flex-col h-full">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container text-primary dark:text-primary-fixed font-label-md text-label-md fixed top-0 right-0 left-[280px] h-16 border-b border-outline-variant shadow-sm flex justify-between items-center px-gutter z-10">
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary">search</span>
+<input class="pl-10 pr-4 py-1.5 border border-outline-variant rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary w-64 bg-white" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                Admin Console
+            </div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+<img alt="Admin User Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant cursor-pointer ml-2" data-alt="A professional headshot of a student administrator in a brightly lit modern office setting. The student is wearing neat business casual attire, slightly out of focus background. Soft, natural lighting highlighting professional, institutional, and structured brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcyauYxIolGzaeoIFMkFMZcRwWbsoYR1tK7Nb4ZVudoWsQUpzc21ksN9DJyQPxhgEx9tJK2Az8_uZcvoeamcDPCFM4aRcFcLBjjoewVmJrAz460dKnZjcDr-cgQWiNzb40jMNw6gFzWNrmalNtpES74bTpivKS_Cas4XCN1w7bDWNb9VPCx2Sc-Jd1IHLU0WgzyhHbHR8a4YwANhALW4QHxcJUBTBlfg0jSnbjdgpCrHsR08jwG1GM"/>
+</div>
+</header>
+<!-- Page Content -->
+<main class="flex-1 overflow-y-auto p-6 mt-16 bg-[#F5F5F5]">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Manajemen Agenda</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Kelola jadwal kegiatan dan agenda organisasi.</p>
+</div>
+<button class="bg-[#800000] text-white px-4 py-2 rounded-md font-label-md hover:bg-[#4D0000] transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)] flex items-center gap-2" id="openModalBtn">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Tambah Agenda
+                    </button>
+</div>
+<!-- Agenda Table Card -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-[#E0E0E0] overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F5F5F5] border-b border-[#E0E0E0]">
+<th class="py-3 px-4 font-label-md text-label-md text-on-surface font-semibold">Judul Agenda</th>
+<th class="py-3 px-4 font-label-md text-label-md text-on-surface font-semibold">Tanggal</th>
+<th class="py-3 px-4 font-label-md text-label-md text-on-surface font-semibold">Unit/Divisi</th>
+<th class="py-3 px-4 font-label-md text-label-md text-on-surface font-semibold">PIC</th>
+<th class="py-3 px-4 font-label-md text-label-md text-on-surface font-semibold">Status</th>
+<th class="py-3 px-4 font-label-md text-label-md text-on-surface font-semibold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-[#E0E0E0]">
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="py-3 px-4 font-medium">Rapat Kerja Tahunan</td>
+<td class="py-3 px-4 text-secondary">15 Nov 2024</td>
+<td class="py-3 px-4">BPH</td>
+<td class="py-3 px-4">Ahmad S.</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-[#E8F5E9] text-[#2E7D32]">Published</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-secondary hover:text-[#800000] p-1 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="py-3 px-4 font-medium">Pelatihan Web Development</td>
+<td class="py-3 px-4 text-secondary">20 Nov 2024</td>
+<td class="py-3 px-4">Litbang</td>
+<td class="py-3 px-4">Budi K.</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-[#FFF3E0] text-[#F57F17]">Pending</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-secondary hover:text-[#800000] p-1 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="py-3 px-4 font-medium">Seminar Nasional IT</td>
+<td class="py-3 px-4 text-secondary">05 Des 2024</td>
+<td class="py-3 px-4">Humas</td>
+<td class="py-3 px-4">Siti N.</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-200 text-gray-700">Draft</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="text-secondary hover:text-[#800000] p-1 transition-colors"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 transition-colors"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal Form Overlay -->
+<div class="fixed inset-0 z-50 bg-black/50 hidden flex items-center justify-center backdrop-blur-sm opacity-0 transition-opacity duration-300" id="agendaModal">
+<div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 transform scale-95 transition-transform duration-300" id="modalContent">
+<div class="flex justify-between items-center p-4 border-b border-[#E0E0E0]">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Tambah Agenda Baru</h3>
+<button class="text-secondary hover:text-on-surface transition-colors" id="closeModalBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-4 space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Judul Agenda</label>
+<input class="w-full px-3 py-2 bg-white border border-[#E0E0E0] rounded-md text-sm focus:outline-none focus:border-[#800000] focus:ring-1 focus:ring-[#800000] transition-colors" placeholder="Masukkan judul agenda" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Tanggal</label>
+<input class="w-full px-3 py-2 bg-white border border-[#E0E0E0] rounded-md text-sm focus:outline-none focus:border-[#800000] focus:ring-1 focus:ring-[#800000] transition-colors text-on-surface" type="date"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Waktu</label>
+<input class="w-full px-3 py-2 bg-white border border-[#E0E0E0] rounded-md text-sm focus:outline-none focus:border-[#800000] focus:ring-1 focus:ring-[#800000] transition-colors text-on-surface" type="time"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Unit/Divisi Terkait</label>
+<select class="w-full px-3 py-2 bg-white border border-[#E0E0E0] rounded-md text-sm focus:outline-none focus:border-[#800000] focus:ring-1 focus:ring-[#800000] transition-colors">
+<option value="">Pilih Divisi</option>
+<option value="bph">Badan Pengurus Harian</option>
+<option value="litbang">Penelitian &amp; Pengembangan</option>
+<option value="humas">Hubungan Masyarakat</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Status</label>
+<div class="flex gap-4 mt-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="text-[#800000] focus:ring-[#800000]" name="status" type="radio"/>
+<span class="text-sm">Draft</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-[#800000] focus:ring-[#800000]" name="status" type="radio"/>
+<span class="text-sm">Published</span>
+</label>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-[#E0E0E0] flex justify-end gap-3 bg-gray-50 rounded-b-lg">
+<button class="px-4 py-2 border border-[#800000] text-[#800000] bg-transparent rounded-md font-label-md hover:bg-red-50 transition-colors" id="cancelModalBtn">Batal</button>
+<button class="px-4 py-2 bg-[#800000] text-white rounded-md font-label-md hover:bg-[#4D0000] transition-colors shadow-sm">Simpan</button>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('agendaModal');
+            const modalContent = document.getElementById('modalContent');
+            const openBtn = document.getElementById('openModalBtn');
+            const closeBtn = document.getElementById('closeModalBtn');
+            const cancelBtn = document.getElementById('cancelModalBtn');
+
+            function openModal() {
+                modal.classList.remove('hidden');
+                // Small delay to allow display:block to apply before animating opacity
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+            }
+
+            function closeModal() {
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                // Wait for transition to finish before hiding
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+
+            // Close on click outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body></html>

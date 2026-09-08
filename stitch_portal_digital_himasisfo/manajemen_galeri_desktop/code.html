@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manajemen Galeri Admin HIMASISFO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-[#F5F5F5] text-on-surface font-body-md h-screen overflow-hidden flex">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-full py-sm bg-on-secondary-fixed dark:bg-black fixed left-0 top-0 h-full w-[280px] shadow-lg z-20">
+<div class="px-gutter mb-lg">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Organization Logo" class="w-10 h-10 rounded-full bg-surface" data-alt="A professional, modern logo for HIMASISFO, an Information Systems student organization. The logo features a stylized abstract representation of data nodes and connections in a sophisticated maroon and silver color palette. The design is clean, corporate, and academic, suitable for a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4cK_K1bXimzZPZp4FslRN-IdCJRdxhNNFIs9wB_P35ZeJzYcMIynei9a48Qp0t1rHXv0xxQ-aOuyDeNhZOkPUuQ51Lrpkahcw17Lq3VW9BobRRUWnhJZGoecpDAq1yO0fcyBSJJ8ctnzRW1aDjWYhrSg4YJZT3S4_8xgvQCGAivxcK5HucaiMkJiXEALHj7k907vhMawjW8GhXFqPr20-oU48gT1wd406qlUad98FK6biEFWsJMbt"/>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h2>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim mt-1">Admin Portal</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-white py-2 rounded-md hover:bg-[#4D0000] transition-colors font-label-md text-label-md shadow-[0_2px_8px_rgba(128,0,0,0.15)]">Create New Post</button>
+</div>
+<nav class="flex-1 overflow-y-auto font-label-md text-label-md">
+<ul class="space-y-2">
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+                        Members
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+                        Academic
+                    </a>
+</li>
+<li>
+<a class="bg-primary dark:bg-primary-container text-white border-l-4 border-primary-fixed px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+                        Galeri
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                        Events
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                        Finances
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        Settings
+                    </a>
+</li>
+</ul>
+</nav>
+<div class="mt-auto px-gutter pt-4 border-t border-secondary-fixed/20 font-label-md text-label-md">
+<ul class="space-y-2">
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                        Support
+                    </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                        Logout
+                    </a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col md:ml-[280px] h-full relative">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container text-primary dark:text-primary-fixed font-label-md text-label-md fixed top-0 right-0 left-0 md:left-[280px] h-16 border-b border-outline-variant shadow-sm z-10">
+<div class="flex justify-between items-center px-gutter h-full">
+<div class="flex items-center gap-4">
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface">Admin Console</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary">search</span>
+<input class="pl-10 pr-4 py-2 border border-[#E0E0E0] rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 text-sm w-64 bg-surface-container-lowest" placeholder="Search..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 cursor-pointer transition-opacity active:opacity-70 relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-high rounded-full p-2 cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-secondary-container overflow-hidden border border-outline-variant cursor-pointer">
+<img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a young adult student in a crisp white shirt, representing a university admin user. The lighting is soft and flattering, typical of a modern corporate portrait. The background is a plain, light grey wall. The mood is confident and approachable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhq_EVp_AMFkPT48ceTcd0xg6cvBlxBKidx75QIhkmW7DFbEMvi10hbIXVRhbTbDZ8gFLK6rs4YtJgj3i4E9Ikwwq6_vWTB4TOuxchabm3_QUpNCFryEPfrjWGY09xxPS3keAnUZxiwh-iZFoDA-HHBvlScGVGq8dHfVSogl5t8RXj73GD0MA9h2WYUJaJ2YPBdOU03BijNWsN-V5Bxl8jQHUs93PMD3NKHeSHiVAuhWd2M0jHUkJZ"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 overflow-y-auto mt-16 p-gutter pb-xl relative">
+<div class="max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface mb-2">Manajemen Galeri</h1>
+<p class="font-body-sm text-body-sm text-secondary">Kelola foto dokumentasi kegiatan HIMASISFO</p>
+</div>
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-md hover:bg-[#4D0000] transition-colors shadow-[0_2px_8px_rgba(128,0,0,0.15)] flex items-center gap-2 font-label-md text-label-md" onclick="document.getElementById('uploadModal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[20px]">upload</span>
+                        Upload Foto
+                    </button>
+</div>
+<!-- Gallery Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(128,0,0,0.15)] transition-all group overflow-hidden flex flex-col">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A group of university students in matching maroon polo shirts sitting at desks in a modern computer lab. They are looking attentively at a projection screen. The lighting is bright and academic. The atmosphere is focused and educational, representing an Information Systems workshop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjZNnWYTzoay2w6pGllLuMTagwMASX67bS9zN8jQWPcIkQBOFDbsBPQnUmUtqOa4IhBTuMqZ3OMUIQTPv0XgWBGm3gfrIa0sKWhz0gOsPhPe2wlEMPV6sqUeMW0SYqX2H8j82ER-GtACI4XuVYxVrUsmHdjQ81BWSPPHemgN38gVrsM8ye4xTUNrMidTywcGHtd4XIGlYSgpRBAjDjgK9YKnMH13UDgIe0lIETCSYxQoZJxG0Myiw4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4">
+<span class="bg-[#F5F5F5] text-on-surface px-2 py-1 rounded text-xs font-semibold">Published</span>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1 line-clamp-1">Workshop UI/UX 2024</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4 line-clamp-2">Sesi praktek mendesain antarmuka menggunakan Figma bersama pemateri industri.</p>
+<div class="mt-auto flex justify-between items-center border-t border-outline-variant pt-3">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span> 142
+                                </span>
+<div class="flex gap-2">
+<button class="text-secondary hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-error hover:text-[#93000a] transition-colors p-1 rounded-full hover:bg-error-container">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(128,0,0,0.15)] transition-all group overflow-hidden flex flex-col">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A large group of students standing on an outdoor campus lawn during golden hour, smiling and posing for a group photo. They are holding a banner that says 'HIMASISFO'. The scene is vibrant, cheerful, and filled with a sense of community. The lighting is warm and natural." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAruF_7c4s87Fg8gXnZ-xVu3YYUgP2qnneEOVQ1_nWF8dzsfJT5qYl5bXMCPzW1N6nYddCHLZWFnBvmYTj4o8ms-ZUBn6RhXwRhZnqfzTVL0kAwhcSo8XclA6b9kYz7fTIGK7WCmFc2QfKYckbQGENla4wZi-x7l7wEXzMcJNflWQOpJFUOhIqPGX4SWsE-YeRNUs8wZrlSuViu4-tobIw0KcuLf_wHwHNiihw4i8fYh-tZALq5dZIx')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4">
+<span class="bg-[#ffdad6] text-[#ba1a1a] px-2 py-1 rounded text-xs font-semibold">Pending</span>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1 line-clamp-1">Makrab Angkatan 2023</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4 line-clamp-2">Kegiatan malam keakraban mahasiswa baru Sistem Informasi.</p>
+<div class="mt-auto flex justify-between items-center border-t border-outline-variant pt-3">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span> 12 Okt 23
+                                </span>
+<div class="flex gap-2">
+<button class="text-secondary hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-error hover:text-[#93000a] transition-colors p-1 rounded-full hover:bg-error-container">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(128,0,0,0.15)] transition-all group overflow-hidden flex flex-col">
+<div class="relative h-48 w-full overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" data-alt="A professional networking event in a modern conference hall. A student in business casual attire is shaking hands with a corporate professional. The background shows sponsor banners and other attendees mingling. The lighting is bright and even. The mood is ambitious and professional." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDr6QToftGwhNFY7CYTzD_1r-IAgmv8OtL99UII54OP3uckBexG9uUKKNY4O2X-usZXX-nFfEzoMaSN86nkr6qzCRW6pkPDwwIDZtoZaX0IL-ukmEEwr5x17JM56HRmTLmeFYYg19eBryWy5m1yawc-YNucLUiF0bRhywqr4zRm6zMUB9RchRqfYsl766oVOVnSp4bo7O9H80ESuP20s5PGJxUyahp-ETJ4vjNJETlCdzYfNjMxLB92')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-between p-4">
+<span class="bg-[#F5F5F5] text-on-surface px-2 py-1 rounded text-xs font-semibold">Published</span>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1 line-clamp-1">IT Career Expo</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4 line-clamp-2">Pameran karir IT tahunan yang menghubungkan mahasiswa dengan perusahaan.</p>
+<div class="mt-auto flex justify-between items-center border-t border-outline-variant pt-3">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span> 310
+                                </span>
+<div class="flex gap-2">
+<button class="text-secondary hover:text-primary transition-colors p-1 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="text-error hover:text-[#93000a] transition-colors p-1 rounded-full hover:bg-error-container">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Upload Modal -->
+<div class="fixed inset-0 z-50 hidden bg-on-surface/50 backdrop-blur-sm flex items-center justify-center p-4" id="uploadModal">
+<div class="bg-surface-container-lowest rounded-lg shadow-2xl w-full max-w-2xl border border-outline-variant flex flex-col max-h-[921px]">
+<div class="flex justify-between items-center p-6 border-b border-outline-variant">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Upload Foto Baru</h2>
+<button class="text-secondary hover:text-primary transition-colors p-2 rounded-full hover:bg-surface-variant" onclick="document.getElementById('uploadModal').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-6 overflow-y-auto">
+<div class="border-2 border-dashed border-[#E0E0E0] rounded-lg p-10 flex flex-col items-center justify-center text-center bg-[#F5F5F5] hover:border-primary hover:bg-primary-container/5 transition-colors cursor-pointer mb-6 group">
+<span class="material-symbols-outlined text-[48px] text-secondary group-hover:text-primary mb-4 transition-colors">cloud_upload</span>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-2">Drag &amp; Drop foto di sini</p>
+<p class="font-body-sm text-body-sm text-secondary mb-4">atau klik untuk memilih file</p>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">Format: JPG, PNG, WEBP (Max 5MB)</span>
+<input accept="image/*" class="hidden" multiple="" type="file"/>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Judul Foto</label>
+<input class="w-full border border-[#E0E0E0] rounded-md px-4 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 bg-surface-container-lowest" placeholder="Contoh: Rapat Kerja 2024" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Deskripsi/Caption</label>
+<textarea class="w-full border border-[#E0E0E0] rounded-md px-4 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 bg-surface-container-lowest h-24 resize-none" placeholder="Tuliskan deskripsi singkat foto..."></textarea>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-outline-variant flex justify-end gap-3 bg-surface-bright rounded-b-lg">
+<button class="px-6 py-2 border border-primary text-primary font-label-md text-label-md rounded-md hover:bg-primary/5 transition-colors" onclick="document.getElementById('uploadModal').classList.add('hidden')">Batal</button>
+<button class="bg-primary-container text-white px-6 py-2 rounded-md hover:bg-[#4D0000] transition-colors font-label-md text-label-md shadow-sm">Upload &amp; Simpan</button>
+</div>
+</div>
+</div>
+</body></html>

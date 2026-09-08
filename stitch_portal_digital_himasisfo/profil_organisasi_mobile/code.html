@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HIMASISFO - Profil Organisasi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface sticky top-0 w-full border-b-2 border-primary shadow-sm z-50">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-weight="fill">school</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">HIMASISFO</span>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden p-2 text-on-surface hover:bg-surface-variant rounded-full transition-colors" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Desktop Nav (Hidden on Mobile) -->
+<div class="hidden md:flex items-center gap-6">
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2" href="#">About</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Events</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Programs</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Resources</a>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-DEFAULT font-label-md text-label-md hover:bg-[#4D0000] transition-colors active:scale-95">Login</button>
+</div>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div class="md:hidden hidden absolute top-16 left-0 w-full bg-surface border-b border-outline-variant shadow-md" id="mobile-menu">
+<div class="flex flex-col p-4 gap-4">
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Home</a>
+<a class="text-primary font-bold border-l-4 border-primary pl-2 font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 py-2" href="#">About</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Events</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Programs</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md" href="#">Resources</a>
+<button class="bg-primary text-on-primary w-full px-4 py-3 rounded-DEFAULT font-label-md text-label-md mt-2">Login</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col pt-md pb-xl">
+<!-- Header Section -->
+<section class="px-gutter mb-lg">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mb-sm">Organizational Structure</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Meet the dedicated team leading HIMASISFO for the current academic year.</p>
+</section>
+<!-- Executive Board (Bento-style layout for top tier) -->
+<section class="px-gutter mb-xl flex flex-col gap-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs border-b border-outline-variant pb-2">Executive Board</h2>
+<!-- President Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-4 flex flex-col items-center text-center hover:shadow-[0_4px_12px_rgba(128,0,0,0.15)] transition-shadow">
+<div class="w-24 h-24 rounded-full overflow-hidden mb-3 border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male student leader in a modern academic setting, bright lighting, high contrast white background with subtle maroon accents, confident expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYJt-Du1uOFb7CQg_MmVX9oBVoi7kQpkUGIatbqXIbv1I4IbHUjdXdTj10P7k_yGGBbm7t7Bi_EK9Vy6N38HsDqBj58i0jN86GrFiAzD9h5eyet4UmYembU09RNlhauI8bLnK-PgrbvackIF3voXdNQJbyjowdQ6-eMOjpcZfYDk-41rTx5N1L9VYohsJJtwm9GqrK7fUYLwTuHW20dYQwmGp6pSEjynaiV1jyCZ-0bpdxiXr0LCT5"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Budi Santoso</h3>
+<p class="font-label-md text-label-md text-primary mb-2">President</p>
+<div class="bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm">Information Systems '21</div>
+</div>
+<!-- VP & Sec/Treas Grid -->
+<div class="grid grid-cols-2 gap-sm mt-sm">
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-3 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-2 border border-outline">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young female student leader in a modern academic setting, bright lighting, high contrast white background with subtle maroon accents, confident expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcel4qy2VSm5mDuY8689BAIsWXNeNS7xOq3q-u9FI0Mrt1e6BiicVQFW18j9eyKk1wYKYqmP217OiB59tRkOnh5qZQt2mdmP9vgvC9BxijCJLwcbcEQGTIfVLXOjAXsg6SNp-AvhE3A5LlCPLfWDeVDmzUkwEh6sth0M_IlynqRQaz2uRvicnnyugYeg09zLZucLi_on7P6s4DNx2k3ctEim4n2N3dZaB0cbXuyUhhvfz5Rdh85k51"/>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Siti Rahma</h4>
+<p class="font-label-sm text-label-sm text-secondary">Vice President</p>
+</div>
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-3 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-2 border border-outline">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male student leader in a modern academic setting, bright lighting, high contrast white background with subtle maroon accents, friendly expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUuoAAmkzBuJsPyeqwylDs4uvjBL4hML3tx3oYMgt1QUfs_VrdII0OxmGsgfNyZ21sp9Aa2cXeHmt_l6A0_FtFOaDOqqZkHfcUr3sUhGolo97br-TmgFVS4SnQ2h9LoAGlBQVaDM-Pe0NGqWV3Z1AC2Z0VRUmcWWBRRHz3If2zBzdIe5IvlfOsAvx8r9rgSNB69cGdoOsemqC92vrEOoYzEFmILcWQ7tGurdyZC8lIbjq4cIUq7WPL"/>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface">Agus Pratama</h4>
+<p class="font-label-sm text-label-sm text-secondary">Secretary General</p>
+</div>
+</div>
+</section>
+<!-- Departments (1 Column List) -->
+<section class="px-gutter flex flex-col gap-md">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-xs border-b border-outline-variant pb-2">Departments</h2>
+<!-- Academic Dept -->
+<div class="flex flex-col gap-sm">
+<div class="bg-surface-container flex items-center gap-3 p-3 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary bg-primary-container/10 p-2 rounded-full">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Academic Affairs</h3>
+</div>
+<!-- Member Cards -->
+<div class="flex flex-col gap-3 pl-4 border-l-2 border-outline-variant ml-4">
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_4px_rgba(0,0,0,0.05)] p-3 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clear, professional headshot of a student, light modern background, well-lit, academic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG6fxLs8eucUlfsNx6aDwFswn9VLp1_JLYuhN6C7n4EWgihad0dPpqWnqQ1HeY_FqnbkoHb67hyCl9rODDYbmNWFL7BCq9-PEF77oIdX2NmmCc9cL2I8_tOvd-cxEP7Hfm2Ru17oojENRn9tf31_X37srSnD-QXgl7Xk2cO_0DoJtyIiRLpJOIxEKH1B58Z03y3T83FgZGusyA1jZhW2GrG2Nkv-1U7Cocv5DIc4N8TtwnEecq0r-V"/>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Dewi Lestari</h4>
+<p class="font-label-sm text-label-sm text-primary">Head of Department</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_4px_rgba(0,0,0,0.05)] p-3 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clear, professional headshot of a student, light modern background, well-lit, academic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhIu-54dLrRLBaa_Ds-7BW0PHr-Y_fZ899SvivZ9_LrPejMvp0FuWibnYSkH-LSKQpC1fcNDhlkq3HzNjP4yj_eWdEPx3_i3-jegTaMOcVxWi_ZvqNbYroo5fOK12IlPowzMspNDqVrskujWtiH5Kn1Th_iR1Ml_h_G_55KH44QPmjBBvmezeeMvf8TWCX29WLk7UnckxjwAl7bxlbKrAuoP87xBdzQsFT2UV-qhOWxziicFlc4-VF"/>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Rizky Febrian</h4>
+<p class="font-label-sm text-label-sm text-secondary">Staff Member</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Public Relations Dept -->
+<div class="flex flex-col gap-sm">
+<div class="bg-surface-container flex items-center gap-3 p-3 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary bg-primary-container/10 p-2 rounded-full">campaign</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Public Relations</h3>
+</div>
+<!-- Member Cards -->
+<div class="flex flex-col gap-3 pl-4 border-l-2 border-outline-variant ml-4">
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_4px_rgba(0,0,0,0.05)] p-3 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clear, professional headshot of a female student, light modern background, well-lit, academic vibe, smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNP6YvANSrQcJA-YaQpgUocizS0mV9we5JCePUhODNItbyKRcpvV-CBrFyG2HgvxBw8eyAvazFWxV01F0_vzoDz3UDkridNMAYn69XcubrQFs7Q41QgZOyxIfjPq8WF994IetaonkMMs5vXM5UGrISAmG19_7y26_odY9HhHaisfUM2kgB4uvhP5DDGHZYPVHyK_EQ7KUr40pF0xL90cymFJz56ZIiXjZ44RgrRPnEGBW-8ABNVV6O"/>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Anita Wulandari</h4>
+<p class="font-label-sm text-label-sm text-primary">Head of Department</p>
+</div>
+</div>
+</div>
+</div>
+<!-- IT & Development Dept -->
+<div class="flex flex-col gap-sm">
+<div class="bg-surface-container flex items-center gap-3 p-3 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary bg-primary-container/10 p-2 rounded-full">code</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">IT &amp; Development</h3>
+</div>
+<!-- Member Cards -->
+<div class="flex flex-col gap-3 pl-4 border-l-2 border-outline-variant ml-4">
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-[0_2px_4px_rgba(0,0,0,0.05)] p-3 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clear, professional headshot of a male student, light modern background, well-lit, tech-focused academic vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1xjnXn-4PLjPvpycK80OmxoIu4OE8T_rWz7EqGkr8D0bAd5QgQ-XExZ_TeAoHsaXyZRKQfJGjMj9mZoYwziw0ZidnoUFDLzqw6ZVQfHGvfFAwOC8UrVfrfpELRh_fd3w_67CaOby3gi87StllTZoMM39P2Ldt7vaDyPF_j27EpfHRC8SpY6JYePioN-khjd3YRB3pX7cfBV3EDRsWiDt_Iu9N5NiYrvIItlN_QSr_DU9eHAS_8IMl"/>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Bima Saputra</h4>
+<p class="font-label-sm text-label-sm text-primary">Head of Department</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed w-full py-lg mt-auto border-t-4 border-primary">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-md">
+<div class="text-center md:text-left">
+<span class="font-headline-sm text-headline-sm text-primary-fixed mb-2 block">HIMASISFO</span>
+<p class="font-body-sm text-body-sm text-secondary-fixed-dim">© 2024 HIMASISFO. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<a class="font-body-sm text-body-sm text-secondary-fixed-dim hover:text-primary-fixed hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-secondary-fixed-dim hover:text-primary-fixed hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-secondary-fixed-dim hover:text-primary-fixed hover:text-primary-fixed-dim transition-colors" href="#">Contact Us</a>
+<a class="font-body-sm text-body-sm text-secondary-fixed-dim hover:text-primary-fixed hover:text-primary-fixed-dim transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile Menu Toggle Logic
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body></html>

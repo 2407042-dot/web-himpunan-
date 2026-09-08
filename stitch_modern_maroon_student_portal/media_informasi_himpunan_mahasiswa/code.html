@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OrgName - Media &amp; Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#b22b1d",
+                      "inverse-on-surface": "#313030",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "secondary-container": "#474746",
+                      "error-container": "#93000a",
+                      "primary": "#ffb4a8",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary-container": "#b7b5b4",
+                      "secondary-fixed": "#e5e2e1",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "on-tertiary": "#2f3131",
+                      "on-surface-variant": "#e2bfb9",
+                      "surface-container-highest": "#353534",
+                      "surface-container": "#201f1f",
+                      "on-background": "#e5e2e1",
+                      "tertiary-fixed": "#e2e2e2",
+                      "tertiary": "#c6c6c7",
+                      "on-secondary": "#313030",
+                      "on-tertiary-container": "#a6a7a8",
+                      "tertiary-container": "#3b3d3d",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "surface-bright": "#3a3939",
+                      "on-primary-fixed": "#410000",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#ffb4a8",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface": "#131313",
+                      "on-primary-container": "#ff8371",
+                      "surface-dim": "#131313",
+                      "background": "#131313",
+                      "on-primary": "#690000",
+                      "primary-container": "#800000",
+                      "on-secondary-fixed-variant": "#474746",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline": "#a98984",
+                      "on-error-container": "#ffdad6",
+                      "outline-variant": "#5a413d",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "secondary": "#c8c6c5",
+                      "primary-fixed": "#ffdad4",
+                      "surface-variant": "#353534"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-sm": "12px",
+                      "stack-md": "24px",
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "stack-lg": "48px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "button": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .glass-card:hover {
+            box-shadow: 0 0 20px rgba(128, 0, 0, 0.3);
+        }
+        .nav-glass {
+            background-color: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/10 shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary tracking-tighter">
+                OrgName
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Beranda</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Sejarah</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Aparatur</a>
+<a class="text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-1 after:h-1 after:bg-primary after:rounded-full font-label-md text-label-md hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Media &amp; Info</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md hover:bg-white/5 transition-all duration-300 px-3 py-2 rounded-DEFAULT active:scale-95 transition-transform" href="#">Aspirasi</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-primary-container text-on-primary font-button text-button px-6 py-2 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all duration-300 active:scale-95">
+                    Hubungi Kami
+                </button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[100px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header -->
+<header class="mb-stack-lg mt-8">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Media &amp; Info</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Latest updates, articles, and insights from our organization. Stay connected with our community.</p>
+</header>
+<!-- Featured Article (Bento Style Full Width) -->
+<section class="mb-stack-lg">
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 h-[500px] relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500" data-alt="A highly professional photograph of a modern university campus event, taken at dusk with dramatic lighting. The scene features students interacting in a sleek, glass-walled building with glowing maroon accents. High contrast, cinematic composition, conveying a sense of academic prestige and forward-thinking energy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIFNnkR8v42wAyFmYQ_yLSChiNy6t07DnP2OnIJPMb3KSWv1AnJMn5NOrPyr4_75GjwlyxoDT4CDY3YfpEKR_iWHktN9-sRAV74zqpGGzfxKwvMz5yBRQ8wB4Zx9PwbFBhUwcrzRn7-JoKcBe7AdrC5xQoXj-gQadgEdrsWEWPJJJeZteOoUGoxd2KcObg7VtobCJ4M_FJdnvZrA7kAwcwOpXmPar5YYkpAvn9agXAc2XsWZbMiG7U')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 md:p-12 w-full md:w-2/3">
+<span class="inline-block bg-primary-container text-on-primary font-label-md text-label-md px-3 py-1 rounded-DEFAULT mb-4">LATEST NEWS</span>
+<h2 class="font-headline-lg md:text-[48px] md:leading-[56px] text-headline-lg text-on-surface font-bold mb-4 group-hover:text-primary transition-colors">Annual Leadership Summit 2024: A New Era of Innovation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant line-clamp-2 mb-6">Discover the key takeaways from our biggest event of the year, where industry leaders and student visionaries gathered to shape the future.</p>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">calendar_today</span> Oct 15, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">schedule</span> 5 min read</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid for Updates & Announcements -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-stack-lg">
+<!-- Standard News Card -->
+<div class="md:col-span-4 glass-card rounded-xl overflow-hidden group cursor-pointer p-6 flex flex-col justify-between h-[300px]">
+<div>
+<span class="inline-block bg-surface-container-high text-primary font-label-md text-label-md px-3 py-1 rounded-DEFAULT mb-4 border border-white/5">ACADEMIC</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mb-2 line-clamp-2">New Research Grants Announced for Tech Innovation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">Applications are now open for the semesterly grants focusing on sustainable technology solutions.</p>
+</div>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-white/10">
+<span class="text-on-surface-variant font-label-md text-label-md">Oct 12, 2024</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Image Heavy Card -->
+<div class="md:col-span-8 glass-card rounded-xl overflow-hidden group cursor-pointer relative h-[300px]">
+<div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:opacity-70 transition-opacity duration-500" data-alt="A close up shot of a sleek, modern architectural detail on a university campus. Geometric shadows fall across textured dark concrete, with a subtle maroon light casting a warm glow. The aesthetic is minimal, high-tech, and sophisticated." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQbAWB44XBLSzSz9LjcYRfSAPcSVXRpkOJIvwrxqGfRbS1Q1cY0OY7oXg2yVsQmkcpf71_b7mVmaTTDVJChkpq4HElGpJf2BYRmVFUkwk03f75VZ9ktmLpgfOsdgRmQO8w5Tf6krvF-0ZYSSD5nwGlaba1-62lalbZk_S7Rq_8MWNZ_RobWk9HL1fhDzEGjVghlvpeP7QqgmIs4OdmnxFqsLYFdhlS79WA2XjqYqzuPsJ4rzHv8FEc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="inline-block bg-primary-container text-on-primary font-label-md text-label-md px-3 py-1 rounded-DEFAULT mb-2">CAMPUS LIFE</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Renovation of the Student Hub Completed</h3>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Gallery Preview</span>
+</div>
+</div>
+</div>
+<!-- Event Card -->
+<div class="md:col-span-6 glass-card rounded-xl p-6 group cursor-pointer border-l-4 border-l-primary">
+<div class="flex items-start justify-between mb-4">
+<div class="bg-surface-container-highest p-3 rounded-lg text-center min-w-[70px]">
+<span class="block font-label-md text-label-md text-primary uppercase">Nov</span>
+<span class="block font-headline-md text-headline-md text-on-surface font-bold">05</span>
+</div>
+<span class="bg-primary/20 text-primary px-2 py-1 rounded text-[12px] font-bold tracking-wider">UPCOMING</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2 group-hover:text-primary transition-colors">Tech Symposium 2024</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Join us for a day of workshops, panels, and networking with top tech firms.</p>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Main Auditorium
+                </div>
+</div>
+<!-- Standard News Card -->
+<div class="md:col-span-6 glass-card rounded-xl p-6 group cursor-pointer">
+<span class="inline-block bg-surface-container-high text-primary font-label-md text-label-md px-3 py-1 rounded-DEFAULT mb-4 border border-white/5">INTERVIEW</span>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors mb-2">Q&amp;A with the New Organization President</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-4">We sat down with Jane Doe to discuss her vision for the upcoming academic year and structural changes.</p>
+<div class="flex items-center gap-2 mt-auto">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person</span>
+</div>
+<span class="text-on-surface-variant font-label-md text-label-md">Editorial Team</span>
+</div>
+</div>
+</section>
+<div class="flex justify-center mt-8">
+<button class="glass-card text-on-surface font-button text-button px-8 py-3 rounded-full hover:bg-white/5 transition-all duration-300 border border-white/20">
+                Load More Articles
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 w-full py-stack-lg mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">
+                OrgName
+            </div>
+<div class="flex gap-6 flex-wrap justify-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">Instagram</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">Twitter</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">Contact Us</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Student Organization. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>

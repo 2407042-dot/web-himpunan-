@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HIMASISFO - Financial Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-[#F5F5F5] text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-on-secondary-fixed shadow-lg flex flex-col py-sm z-50">
+<div class="px-gutter mb-lg">
+<h1 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h1>
+<p class="font-label-md text-label-md text-secondary-fixed-dim mt-1">Admin Portal</p>
+</div>
+<div class="px-4 mb-lg">
+<button class="w-full bg-primary-container text-white rounded-lg py-3 px-4 font-label-md flex items-center justify-center gap-2 hover:bg-[#4D0000] transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                Create New Post
+            </button>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+                Members
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">school</span>
+                Academic
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+                Events
+            </a>
+<a class="bg-primary text-white border-l-4 border-primary-fixed px-4 py-3 flex items-center gap-3 font-label-md text-label-md active:translate-x-1" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+                Finances
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 border-t border-secondary-fixed-dim/20 pt-4">
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+                Support
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-[280px] h-16 bg-surface border-b border-outline-variant shadow-sm z-40 flex justify-between items-center px-gutter">
+<div class="flex items-center gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Admin Console</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-highest border border-[#E0E0E0] rounded-full text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary w-[250px] transition-all" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:bg-surface-container-high rounded-full p-2 cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-primary hover:bg-surface-container-high rounded-full p-2 cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<img alt="Admin User Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant ml-2" data-alt="A small, circular profile picture of an Asian male student in his early twenties, smiling professionally, wearing a maroon polo shirt. Soft, natural studio lighting against a clean white background. High resolution, corporate modern academic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWcLfwSi7vO3W-s2vpCFpBi3Qm8MxPbQr6fxM8A4X-kLu4ab58YuEK2yIF66i5UEHYQiKsYGXStOIXK8fF6r5Ey13qqSky-pZmV8Usu2nCN8LPpIyHGREFJiPSgQTDa5P_G6p2YyjHZvZWUWI6K7SuW5U21jRuny9XT2png53zDapu0tBwnAeTc1NRlU2LTLIOVKaYCt5f72OEMAjs8pt3nnSHwqEEOK9HQlQXdbt9r-9RWJ7t34dw"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[280px] pt-24 px-gutter pb-xl max-w-container-max">
+<!-- Header & Actions -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Laporan Keuangan</h2>
+<p class="font-body-md text-body-md text-secondary">Manage and track organization's financial activities.</p>
+</div>
+<div class="flex items-center gap-4">
+<select class="bg-surface border border-[#E0E0E0] text-on-surface font-body-sm text-body-sm rounded-lg px-4 py-2 focus:ring-primary focus:border-primary">
+<option>October 2024</option>
+<option>September 2024</option>
+<option>August 2024</option>
+</select>
+<button class="bg-[#800000] hover:bg-[#4D0000] text-white font-label-md text-label-md px-6 py-2 rounded-lg transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Tambah Transaksi
+                </button>
+</div>
+</div>
+<!-- Info Banner -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-4 mb-8 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Restricted Access Data</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Laporan ini bersifat rahasia dan hanya boleh diakses oleh pengurus inti HIMASISFO.</p>
+</div>
+</div>
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<!-- Income -->
+<div class="bg-surface rounded-lg p-6 border border-[#E0E0E0] shadow-[0_4px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(128,0,0,0.08)] transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-[#E8F5E9] text-[#2E7D32] rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-1 rounded-full">This Month</span>
+</div>
+<h3 class="font-body-sm text-body-sm text-secondary mb-1">Total Pemasukan</h3>
+<p class="font-headline-md text-headline-md text-on-surface">Rp 12.500.000</p>
+</div>
+<!-- Expenses -->
+<div class="bg-surface rounded-lg p-6 border border-[#E0E0E0] shadow-[0_4px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(128,0,0,0.08)] transition-all group">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-[#FFEBEE] text-[#C62828] rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">arrow_upward</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-1 rounded-full">This Month</span>
+</div>
+<h3 class="font-body-sm text-body-sm text-secondary mb-1">Total Pengeluaran</h3>
+<p class="font-headline-md text-headline-md text-on-surface">Rp 4.250.000</p>
+</div>
+<!-- Balance -->
+<div class="bg-surface rounded-lg p-6 border border-[#E0E0E0] shadow-[0_4px_12px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(128,0,0,0.08)] transition-all group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed-dim/20 rounded-full blur-xl"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="p-3 bg-primary-container text-white rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-1 rounded-full">Current</span>
+</div>
+<h3 class="font-body-sm text-body-sm text-secondary mb-1 relative z-10">Saldo Tersedia</h3>
+<p class="font-headline-md text-headline-md text-on-surface relative z-10">Rp 8.250.000</p>
+</div>
+</div>
+<!-- Data Table Section -->
+<div class="bg-surface border border-[#E0E0E0] rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.04)] overflow-hidden">
+<div class="p-6 border-b border-[#E0E0E0] flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Riwayat Transaksi</h3>
+<div class="flex gap-2">
+<button class="p-2 text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 text-secondary hover:text-primary hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#F5F5F5] font-label-md text-label-md text-secondary border-b border-[#E0E0E0]">
+<th class="py-4 px-6 font-semibold">Tanggal</th>
+<th class="py-4 px-6 font-semibold">Deskripsi</th>
+<th class="py-4 px-6 font-semibold">Kategori</th>
+<th class="py-4 px-6 font-semibold">Tipe</th>
+<th class="py-4 px-6 font-semibold text-right">Jumlah (Rp)</th>
+<th class="py-4 px-6 font-semibold text-center">Aksi</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-[#E0E0E0]">
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="py-4 px-6">24 Oct 2024</td>
+<td class="py-4 px-6 font-medium">Uang Kas Angkatan 2022</td>
+<td class="py-4 px-6">Pemasukan Kas</td>
+<td class="py-4 px-6">
+<span class="bg-[#E8F5E9] text-[#2E7D32] px-2 py-1 rounded-full text-xs font-semibold">In</span>
+</td>
+<td class="py-4 px-6 text-right font-medium text-[#2E7D32]">+ 1.500.000</td>
+<td class="py-4 px-6 text-center">
+<div class="flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-secondary hover:text-primary p-1 rounded"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 rounded"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="py-4 px-6">22 Oct 2024</td>
+<td class="py-4 px-6 font-medium">Konsumsi Rapat Pleno</td>
+<td class="py-4 px-6">Operasional</td>
+<td class="py-4 px-6">
+<span class="bg-[#FFEBEE] text-[#C62828] px-2 py-1 rounded-full text-xs font-semibold">Out</span>
+</td>
+<td class="py-4 px-6 text-right font-medium text-[#C62828]">- 350.000</td>
+<td class="py-4 px-6 text-center">
+<div class="flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-secondary hover:text-primary p-1 rounded"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 rounded"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="py-4 px-6">18 Oct 2024</td>
+<td class="py-4 px-6 font-medium">Sponsorship PT. Tech Jaya</td>
+<td class="py-4 px-6">Dana Usaha</td>
+<td class="py-4 px-6">
+<span class="bg-[#E8F5E9] text-[#2E7D32] px-2 py-1 rounded-full text-xs font-semibold">In</span>
+</td>
+<td class="py-4 px-6 text-right font-medium text-[#2E7D32]">+ 5.000.000</td>
+<td class="py-4 px-6 text-center">
+<div class="flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-secondary hover:text-primary p-1 rounded"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 rounded"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container/30 transition-colors group">
+<td class="py-4 px-6">15 Oct 2024</td>
+<td class="py-4 px-6 font-medium">Cetak Proposal Proker</td>
+<td class="py-4 px-6">Kesekretariatan</td>
+<td class="py-4 px-6">
+<span class="bg-[#FFEBEE] text-[#C62828] px-2 py-1 rounded-full text-xs font-semibold">Out</span>
+</td>
+<td class="py-4 px-6 text-right font-medium text-[#C62828]">- 120.000</td>
+<td class="py-4 px-6 text-center">
+<div class="flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-secondary hover:text-primary p-1 rounded"><span class="material-symbols-outlined text-[18px]">edit</span></button>
+<button class="text-secondary hover:text-error p-1 rounded"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-[#E0E0E0] flex justify-between items-center text-body-sm text-secondary">
+<span>Showing 1 to 4 of 24 entries</span>
+<div class="flex gap-1">
+<button class="px-3 py-1 border border-[#E0E0E0] rounded hover:bg-surface-container disabled:opacity-50" disabled="">Prev</button>
+<button class="px-3 py-1 bg-primary text-white rounded">1</button>
+<button class="px-3 py-1 border border-[#E0E0E0] rounded hover:bg-surface-container">2</button>
+<button class="px-3 py-1 border border-[#E0E0E0] rounded hover:bg-surface-container">3</button>
+<button class="px-3 py-1 border border-[#E0E0E0] rounded hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

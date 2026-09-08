@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HIMASISFO - Galeri Dokumentasi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#570000",
+                        "tertiary-container": "#0021b9",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "on-surface-variant": "#5a413d",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#261816",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ffedea",
+                        "surface-bright": "#fff8f6",
+                        "inverse-surface": "#3d2d2a",
+                        "on-primary-fixed-variant": "#8f0f07",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fff8f6",
+                        "surface-variant": "#f7ddd8",
+                        "secondary-container": "#e5e2e1",
+                        "primary-container": "#800000",
+                        "background": "#fff8f6",
+                        "on-tertiary-fixed-variant": "#1830c2",
+                        "outline-variant": "#e2bfb9",
+                        "secondary": "#5f5e5e",
+                        "surface-container-highest": "#f7ddd8",
+                        "on-tertiary-container": "#94a0ff",
+                        "surface-container-low": "#fff0ee",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-fixed": "#dfe0ff",
+                        "on-primary-fixed": "#410000",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-tint": "#b22b1d",
+                        "on-background": "#261816",
+                        "tertiary": "#00137f",
+                        "on-primary-container": "#ff8371",
+                        "on-secondary-container": "#656464",
+                        "surface-container": "#ffe9e6",
+                        "on-tertiary-fixed": "#000c61",
+                        "inverse-primary": "#ffb4a8",
+                        "surface-dim": "#eed4d0",
+                        "tertiary-fixed-dim": "#bcc2ff",
+                        "outline": "#8e706c",
+                        "surface-container-high": "#fde2de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "xl": "64px",
+                        "xs": "4px",
+                        "container-max": "1200px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Poppins"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Poppins"],
+                        "headline-sm": ["Poppins"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Poppins"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Poppins"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["18px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F5F5F5; }
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(87, 0, 0, 0.15), 0 4px 6px -2px rgba(87, 0, 0, 0.1);
+        }
+        .filter-btn.active {
+            background-color: #800000;
+            color: #ffffff;
+            border-color: #800000;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 w-full border-b-2 border-primary shadow-sm z-50">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                HIMASISFO
+            </div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md active:scale-95 transition-transform" href="#">Home</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md active:scale-95 transition-transform" href="#">About</a>
+<a class="text-primary font-bold border-b-2 border-primary font-body-md text-body-md px-3 py-2 active:scale-95 transition-transform" href="#">Events</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md active:scale-95 transition-transform" href="#">Programs</a>
+<a class="text-secondary hover:text-primary font-body-md text-body-md hover:bg-primary-container/10 transition-colors duration-200 px-3 py-2 rounded-md active:scale-95 transition-transform" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<input class="bg-transparent border-none outline-none text-body-sm w-48 text-on-surface" placeholder="Search..." type="text"/>
+<span class="material-symbols-outlined text-secondary ml-2">search</span>
+</div>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-md hover:bg-[#4D0000] transition-colors active:scale-95">
+                    Login
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-xl">
+<!-- Header Section -->
+<div class="mb-lg text-center md:text-left">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-sm">Galeri Dokumentasi</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Momen-momen terbaik dan pencapaian civitas akademika Sistem Informasi dalam berbagai kegiatan dan kompetisi.</p>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4 justify-center md:justify-start mb-lg">
+<button class="filter-btn active px-6 py-2 rounded-full border border-outline-variant font-label-md text-label-md transition-colors hover:bg-surface-container">Semua</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant font-label-md text-label-md text-secondary transition-colors hover:bg-surface-container">Kegiatan</button>
+<button class="filter-btn px-6 py-2 rounded-full border border-outline-variant font-label-md text-label-md text-secondary transition-colors hover:bg-surface-container">Prestasi</button>
+</div>
+<!-- Photo Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Grid Item 1 (Kegiatan) -->
+<div class="gallery-item group relative bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant shadow-sm">
+<div class="aspect-[4/3] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A group of university students in a modern computer lab, engaged in a hackathon event. The lighting is bright and cool, reflecting a high-tech academic environment. The students are focused on their monitors, wearing casual smart attire. The color palette features whites, light grays, and subtle maroon accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk2kgMjfZGdWZHBnq6QhX5Jce5cXS89i9vv3dh4wwz-IapMwdB6t_Ys-1oJfQnfKIf_E9fO6L_4km2h0YOgmrzG5Ef2gXiFA6vEOQpEFSUqAxk8cKr6l7yDXbx-254if9FNwfgmgH78_0ihXI9rCGG90E50ctexWhYgn84Z-k_ltSj3uPH7WKkYcl343qlRyCerc7iJqkpo8imwdDBDVLWUOkVIvWZyNrPH8fX2lmpmnQjLBBzTSj6"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px]">zoom_in</span>
+</div>
+</div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 bg-surface-variant text-on-surface-variant rounded-full font-label-sm text-label-sm mb-2">Kegiatan</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">Hackathon Nasional 2024</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">12 Nov 2024</p>
+</div>
+</div>
+<!-- Grid Item 2 (Prestasi) -->
+<div class="gallery-item group relative bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant shadow-sm lg:col-span-2 lg:row-span-2">
+<div class="aspect-[4/3] lg:aspect-auto lg:h-full w-full relative">
+<img class="w-full h-full object-cover" data-alt="A proud university student holding a golden trophy on a brilliantly lit stage during an award ceremony. The backdrop is a large digital screen with a modern, professional academic theme. The lighting is dramatic yet warm, highlighting the student's achievement. The scene is dominated by deep maroon and bright gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUhynbZYM-5YmpFD6hc62WgNe7fJW0jTLrS4Y8mcFtHcaNbL7SjGQTjaICPR6Vki_3K5dWkwqrd9UPIAgK5AWa3dMXrkoP0PnzFEXA8zYrCnA8njz0qM6JJNzWNEySTcrW60c74htvkAux7SkGMvrMt34zM1PNySjyiCkRAwc3oSC_fBFghw9ajGM7HrEH95mzi1EMW1JKwV89g_Ljf3gHtEfjjyP0s8OO0Wu19MzXtqYntb2gqtUL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<span class="inline-block px-3 py-1 bg-primary-container/80 backdrop-blur-sm text-white rounded-full font-label-md text-label-md mb-3 border border-white/20">Prestasi Utama</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Juara 1 UI/UX Design Competition Nasional</h3>
+<p class="font-body-sm text-body-sm text-surface-container-high line-clamp-2">Tim desain HIMASISFO berhasil meraih posisi pertama dalam kompetisi desain tingkat nasional bergengsi.</p>
+</div>
+</div>
+</div>
+<!-- Grid Item 3 (Kegiatan) -->
+<div class="gallery-item group relative bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant shadow-sm">
+<div class="aspect-[4/3] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A seminar room filled with students listening attentively to a guest speaker standing at a podium. The room is modern, with large windows letting in natural daylight. The overall tone is professional and academic, utilizing a clean light-mode aesthetic with subtle maroon branding visible on the presentation slides." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDczJHs8rti5r6bi_DHEKCN72wHWEk-XBq8O5mRhj6W0c3k-TNX7NAJtoEydb6Kb7N8mNbDhp2fscR6j_efo0ecINlOB0-epH1Hd0VxvFICyBW6aEEcfXM1nZxOv2rCr9FAWjT5B_z2YSh7Rl6QmaMAUk-JrgwiVh3i0ycyv4pRj9r7W6zJ0gv6F1jDVyi-MXw8DFVTLax7deDDiD0_k44iQVU94TmJdUdCndW0d5FBrVjuH2wFUPVp"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px]">zoom_in</span>
+</div>
+</div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 bg-surface-variant text-on-surface-variant rounded-full font-label-sm text-label-sm mb-2">Kegiatan</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">Seminar Tech Trends 2024</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">05 Okt 2024</p>
+</div>
+</div>
+<!-- Grid Item 4 (Prestasi) -->
+<div class="gallery-item group relative bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant shadow-sm">
+<div class="aspect-[4/3] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of three students holding certificates and smiling at the camera. They are wearing formal university blazers with maroon accents. The background is a brightly lit, modern university hallway with glass walls. The aesthetic is clean, corporate-academic, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAhZunenrh4sNuQqrM5-mJNrQdJ6cQCKmCjW-OG8xpgNXPcq7N9Cxn5a_WM2qphUE1TcKXWYaQP62PgFDfGaFxQmVGOT5bHvXTbxg-YccuKwJLttUrzkfvHyRz96srhEsGFq65kDdkzKLK9GKMyHsv6xl1Uf067fdARrAGKP4gSas8R0Kt2kc5wVwtMFaNJIQj03RKtO4jgVOnidNv1MicjbqI-8YYKZ1AEfTMnMLieZ-_GZStrCGC"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px]">zoom_in</span>
+</div>
+</div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full font-label-sm text-label-sm mb-2">Prestasi</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">Finalis Data Science Awards</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">28 Sep 2024</p>
+</div>
+</div>
+<!-- Grid Item 5 (Kegiatan) -->
+<div class="gallery-item group relative bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant shadow-sm">
+<div class="aspect-[4/3] w-full relative">
+<img class="w-full h-full object-cover" data-alt="Students participating in a team-building exercise outdoors on a sunny day. The campus green is lush and vibrant, contrasting with the structured, modern architecture of the university buildings in the background. The mood is energetic and collaborative, fitting a light-mode modern academic design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNsJfByGj_dlZHt3W7kfkbx5gQkugg-EFqevSAvuVq7YkWnac2a0CrFwlYwnpT__4B-zDYXsY7XUjxMTj5Ex8T3wZ35TJbS7kbiQT8i7OfdS9MdjrYQu0cVCC3G-h89KdF-_Oxf7CcELyUAB9HgfLEmYbECdCGjaov_n2apkybG3laihHtXXazHMGdWA4Qpg3JjUZCHrvWZPTiLaileuEEzvLSfy-1IFuTs4IppQqIioiBoULKOe4U"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px]">zoom_in</span>
+</div>
+</div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 bg-surface-variant text-on-surface-variant rounded-full font-label-sm text-label-sm mb-2">Kegiatan</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">Makrab Mahasiswa Baru</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">15 Sep 2024</p>
+</div>
+</div>
+<!-- Grid Item 6 (Kegiatan) -->
+<div class="gallery-item group relative bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant shadow-sm">
+<div class="aspect-[4/3] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A well-lit university classroom where a student is presenting a project on a large screen. The audience of peers is engaged. The room features minimalist, modern furniture in light grays and whites, with subtle maroon structural details. The lighting is soft and even, typical of a high-end corporate academic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwwtVevvxURBnFHuyVhfFsp6XiRbfDhR_enQO7ojXkN4VCzopYtEepGJ60hZPyeuNXHyILYeQkme54R0wXwmLaZS77TKDNJ8yeKDTDLH-2XMKX_fj1EzOSpQOanIfO7idQ3iKUaCvqsh_vhpYFeGd9uVkfCrmwpL06hqjM4vtfWSGTRT9JyxM67UAcO7KAEjQ-RXpvR6LtmhomtjCC7pULBFs2SlHh5LH7FI-z0lr94t2sEnWKjx57"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[32px]">zoom_in</span>
+</div>
+</div>
+<div class="p-4">
+<span class="inline-block px-2 py-1 bg-surface-variant text-on-surface-variant rounded-full font-label-sm text-label-sm mb-2">Kegiatan</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">Presentasi Proyek Akhir</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">10 Agu 2024</p>
+</div>
+</div>
+</div>
+<div class="mt-lg flex justify-center">
+<button class="font-label-md text-label-md text-primary bg-surface-container-lowest border border-primary px-6 py-3 rounded-md hover:bg-surface-container transition-colors shadow-sm">Muat Lebih Banyak</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed w-full py-lg mt-auto border-t-4 border-primary flat">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-6">
+<div class="font-headline-sm text-headline-sm text-primary-fixed">
+                HIMASISFO
+            </div>
+<div class="flex flex-wrap gap-4 justify-center">
+<a class="text-secondary-fixed-dim hover:text-primary-fixed font-body-sm text-body-sm hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-secondary-fixed-dim hover:text-primary-fixed font-body-sm text-body-sm hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-secondary-fixed-dim hover:text-primary-fixed font-body-sm text-body-sm hover:text-primary-fixed-dim transition-colors" href="#">Contact Us</a>
+<a class="text-secondary-fixed-dim hover:text-primary-fixed font-body-sm text-body-sm hover:text-primary-fixed-dim transition-colors" href="#">Sitemap</a>
+</div>
+<div class="font-body-sm text-body-sm text-secondary-fixed-dim">
+                © 2024 HIMASISFO. All rights reserved.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple filter logic for visual interaction demonstration
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-white', 'border-primary');
+                    b.classList.add('text-secondary');
+                });
+                // Add active class to clicked
+                this.classList.add('active', 'bg-primary', 'text-white', 'border-primary');
+                this.classList.remove('text-secondary');
+            });
+        });
+    </script>
+</body></html>

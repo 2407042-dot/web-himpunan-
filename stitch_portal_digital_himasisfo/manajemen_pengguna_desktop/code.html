@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manajemen Pengguna - Admin HIMASISFO</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Poppins"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Poppins"],
+                      "headline-sm": ["Poppins"],
+                      "body-sm": ["Inter"],
+                      "headline-lg": ["Poppins"],
+                      "label-sm": ["Inter"],
+                      "headline-lg-mobile": ["Poppins"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- JSON Index 1: SideNavBar -->
+<nav class="hidden md:flex flex-col h-full py-sm fixed left-0 top-0 w-[280px] bg-on-secondary-fixed shadow-lg z-40">
+<div class="px-gutter mb-8 mt-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center overflow-hidden">
+<img alt="Organization Logo" class="w-full h-full object-cover" data-alt="A highly detailed 50-100 word prompt describing a professional, modern crest or logo design for a university student organization. The logo should feature a blend of deep maroon and crisp white colors, with clean geometric lines implying technology and information systems, set against a solid background for clear visibility in a dark user interface sidebar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSnrC9OTxwNmDXqQbKZMkMQ5hdOqy_I-aaEGRxpFe1oYYDlKpSTxWd-bXNCPL6b9GuGZnWZmja1SrJc_55G7PeF7YzpWiHP2kNHetUlfARcti0KrMNbv1rcaXXFrihHzKDyATbh-QYY7w2_Yby5pi6rZwLAgS4t1ArHeBzuyPmqHgqamcmbXU0qKABJCN7PNnvO6igxb68ySKNfBlm72qn0C73NsvOK_Q5OkEIm0tNwmH6bnJ546-G"/>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h1>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim mt-1">Admin Portal</p>
+</div>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-primary text-white py-3 rounded-lg font-label-md flex justify-center items-center gap-2 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined">add</span>
+                Create New Post
+            </button>
+</div>
+<ul class="flex flex-col gap-1 flex-grow overflow-y-auto font-label-md text-label-md">
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<!-- Active State Logic: 'Members' matches 'Manajemen Pengguna' -->
+<a class="bg-primary text-white border-l-4 border-primary-fixed px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">groups</span>
+                    Members
+                </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">school</span>
+                    Academic
+                </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                    Events
+                </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+                    Finances
+                </a>
+</li>
+<li>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+<div class="mt-auto pt-4 border-t border-secondary-fixed/20 font-label-md text-label-md">
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+                Support
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white px-4 py-3 flex items-center gap-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="md:ml-[280px] min-h-screen flex flex-col">
+<!-- JSON Index 2: TopNavBar Admin -->
+<header class="fixed top-0 right-0 left-[280px] h-16 bg-surface flex justify-between items-center px-gutter border-b border-outline-variant shadow-sm z-30">
+<div class="flex items-center">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Admin Console</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button aria-label="Notifications" class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button aria-label="Messages" class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full cursor-pointer transition-opacity active:opacity-70">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant cursor-pointer">
+<img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="A highly detailed 50-100 word prompt describing a professional headshot of a student administrator. The individual is wearing a crisp, modern collared shirt, smiling confidently against a soft, bright, neutral background. The lighting is studio-quality, emphasizing clarity and professionalism suitable for a high-end corporate or academic web application interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwRgyihSrdyj76NFy8ayrY6L5RB7V266ZlzMXfjSEypG20jvhsVZ6TZSI0yUvXl0thKGedRjcoqchlyAN87yaQ_yssatWkMHYJR8yBkH886xQjezvVGPxLxSeE8wvgWVAtLy-i7hjNoIAq96GzWvmzEsl0mIw7LBRqIy4kMTc6p7CYpmeAGDUi1VQLoFYStMqXwuF17vqgpsc4AUpMNejnCs0dSlVTXwysTEI1erS5hd2BvasBynyD"/>
+</div>
+</div>
+</header>
+<!-- Canvas / Content Area -->
+<main class="flex-grow pt-[88px] px-gutter pb-xl max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Manajemen Pengguna</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kelola data administrator dan hak akses sistem.</p>
+</div>
+<button class="bg-primary-container text-white px-6 py-2.5 rounded-lg font-label-md hover:bg-primary-container/90 transition-all flex items-center gap-2 shadow-sm hover:shadow-md hover:-translate-y-0.5" onclick="toggleModal('addAdminModal')">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+                    Tambah Admin
+                </button>
+</div>
+<!-- Data Table Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0_4px_12px_rgba(0,0,0,0.03)] overflow-hidden">
+<!-- Table Controls (Optional visual filler for realism) -->
+<div class="p-4 border-b border-outline-variant bg-surface flex justify-between items-center">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-sm focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Cari pengguna..." type="text"/>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-lg border border-outline-variant flex items-center gap-2 font-label-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filter
+                    </button>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant">
+<th class="py-3 px-4 font-label-md text-on-surface-variant whitespace-nowrap">Nama</th>
+<th class="py-3 px-4 font-label-md text-on-surface-variant whitespace-nowrap">Email</th>
+<th class="py-3 px-4 font-label-md text-on-surface-variant whitespace-nowrap">Peran</th>
+<th class="py-3 px-4 font-label-md text-on-surface-variant whitespace-nowrap">Unit Kerja</th>
+<th class="py-3 px-4 font-label-md text-on-surface-variant whitespace-nowrap text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container font-label-md">
+                                            AR
+                                        </div>
+<span class="font-label-md text-on-surface group-hover:text-primary-container transition-colors">Ahmad Ridwan</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-sm text-on-surface-variant">ahmad.r@himasisfo.org</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[12px] font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">Super Admin</span>
+</td>
+<td class="py-4 px-4 font-body-sm text-on-surface-variant">Badan Pengurus Inti</td>
+<td class="py-4 px-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-secondary hover:text-primary-container hover:bg-primary-fixed/20 rounded transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error hover:bg-error-container/20 rounded transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-label-md">
+                                            SK
+                                        </div>
+<span class="font-label-md text-on-surface group-hover:text-primary-container transition-colors">Siti Kusuma</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-sm text-on-surface-variant">siti.kusuma@himasisfo.org</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[12px] font-medium bg-surface-variant text-on-surface-variant">Admin Akademik</span>
+</td>
+<td class="py-4 px-4 font-body-sm text-on-surface-variant">Divisi Pendidikan</td>
+<td class="py-4 px-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-secondary hover:text-primary-container hover:bg-primary-fixed/20 rounded transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error hover:bg-error-container/20 rounded transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-label-md">
+                                            BP
+                                        </div>
+<span class="font-label-md text-on-surface group-hover:text-primary-container transition-colors">Budi Pratama</span>
+</div>
+</td>
+<td class="py-4 px-4 font-body-sm text-on-surface-variant">budi.p@himasisfo.org</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[12px] font-medium bg-surface-variant text-on-surface-variant">Admin Keuangan</span>
+</td>
+<td class="py-4 px-4 font-body-sm text-on-surface-variant">Kebendaharaan</td>
+<td class="py-4 px-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 text-secondary hover:text-primary-container hover:bg-primary-fixed/20 rounded transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error hover:bg-error-container/20 rounded transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination (Visual) -->
+<div class="p-4 border-t border-outline-variant bg-surface flex justify-between items-center text-body-sm text-on-surface-variant">
+<span>Menampilkan 1 hingga 3 dari 12 pengguna</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded bg-primary-container text-white">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container">3</button>
+<button class="w-8 h-8 flex items-center justify-center rounded border border-outline-variant hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Modal: Tambah Admin -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 hidden" id="addAdminModal" role="dialog">
+<!-- Backdrop -->
+<div aria-hidden="true" class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="toggleModal('addAdminModal')"></div>
+<div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+<div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+<!-- Modal Panel -->
+<div class="relative transform overflow-hidden rounded-xl bg-surface-container-lowest text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg border border-outline-variant">
+<div class="px-6 py-5 border-b border-outline-variant flex justify-between items-center bg-surface">
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modal-title">Tambah Admin Baru</h3>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors p-1 rounded-full hover:bg-surface-container-high" onclick="toggleModal('addAdminModal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<form class="p-6">
+<div class="space-y-5">
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="name">Nama Lengkap</label>
+<input class="w-full px-4 py-2.5 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" id="name" placeholder="Masukkan nama lengkap" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="email">Alamat Email</label>
+<input class="w-full px-4 py-2.5 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" id="email" placeholder="email@himasisfo.org" type="email"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="role">Peran Akses</label>
+<select class="w-full px-4 py-2.5 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all appearance-none" id="role">
+<option disabled="" selected="" value="">Pilih Peran</option>
+<option value="superadmin">Super Admin</option>
+<option value="akademik">Admin Akademik</option>
+<option value="keuangan">Admin Keuangan</option>
+<option value="publikasi">Admin Publikasi</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-1" for="unit">Unit Kerja</label>
+<select class="w-full px-4 py-2.5 bg-surface border border-outline-variant rounded-lg text-body-md focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all appearance-none" id="unit">
+<option disabled="" selected="" value="">Pilih Unit</option>
+<option value="bpi">Badan Pengurus Inti</option>
+<option value="pendidikan">Divisi Pendidikan</option>
+<option value="kewirausahaan">Divisi Kewirausahaan</option>
+<option value="humas">Hubungan Masyarakat</option>
+</select>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-end gap-3 pt-4 border-t border-outline-variant">
+<button class="px-5 py-2.5 rounded-lg border border-outline-variant text-on-surface-variant font-label-md hover:bg-surface-container transition-colors" onclick="toggleModal('addAdminModal')" type="button">
+                                Batal
+                            </button>
+<button class="px-5 py-2.5 rounded-lg bg-primary-container text-white font-label-md hover:bg-primary-container/90 shadow-sm transition-all" onclick="toggleModal('addAdminModal')" type="button">
+                                Simpan Admin
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Script for Modal Toggle -->
+<script>
+        function toggleModal(modalID) {
+            const modal = document.getElementById(modalID);
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                // Optional: disable body scroll when modal is open
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body></html>

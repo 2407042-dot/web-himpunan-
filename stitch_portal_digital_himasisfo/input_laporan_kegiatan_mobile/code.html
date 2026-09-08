@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Input Laporan Kegiatan - HIMASISFO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#570000",
+                      "tertiary-container": "#0021b9",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "on-surface-variant": "#5a413d",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#261816",
+                      "secondary-fixed": "#e5e2e1",
+                      "primary-fixed": "#ffdad4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ffedea",
+                      "surface-bright": "#fff8f6",
+                      "inverse-surface": "#3d2d2a",
+                      "on-primary-fixed-variant": "#8f0f07",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fff8f6",
+                      "surface-variant": "#f7ddd8",
+                      "secondary-container": "#e5e2e1",
+                      "primary-container": "#800000",
+                      "background": "#fff8f6",
+                      "on-tertiary-fixed-variant": "#1830c2",
+                      "outline-variant": "#e2bfb9",
+                      "secondary": "#5f5e5e",
+                      "surface-container-highest": "#f7ddd8",
+                      "on-tertiary-container": "#94a0ff",
+                      "surface-container-low": "#fff0ee",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-fixed-variant": "#474646",
+                      "tertiary-fixed": "#dfe0ff",
+                      "on-primary-fixed": "#410000",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#b22b1d",
+                      "on-background": "#261816",
+                      "tertiary": "#00137f",
+                      "on-primary-container": "#ff8371",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#ffe9e6",
+                      "on-tertiary-fixed": "#000c61",
+                      "inverse-primary": "#ffb4a8",
+                      "surface-dim": "#eed4d0",
+                      "tertiary-fixed-dim": "#bcc2ff",
+                      "outline": "#8e706c",
+                      "surface-container-high": "#fde2de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "40px",
+                      "xl": "64px",
+                      "xs": "4px",
+                      "container-max": "1200px",
+                      "md": "24px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "gutter": "16px" 
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Poppins"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Poppins"
+                      ],
+                      "headline-sm": [
+                              "Poppins"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Poppins"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Poppins"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Mobile specific adjustments */
+        body {
+            background-color: #F5F5F5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Drawer transition */
+        #mobile-drawer {
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-drawer.open {
+            transform: translateX(0);
+        }
+        #drawer-overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        /* Input focus styles */
+        .input-field:focus {
+            border-color: #800000;
+            box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.2);
+            outline: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md text-on-surface antialiased bg-surface-container-lowest">
+<!-- Mobile Top App Bar (Replaces TopNavBar logic for mobile context) -->
+<header class="fixed top-0 w-full h-16 bg-surface-container-lowest z-30 flex items-center justify-between px-gutter border-b border-outline-variant shadow-sm" style="height: 64px;">
+<div class="flex items-center gap-3">
+<button class="p-2 -ml-2 text-on-surface hover:bg-surface-container-high rounded-full transition-colors active:scale-95" id="menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface">Input Laporan</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A small circular avatar placeholder image for an admin user profile. Simple light gray background with a subtle silhouette. Professional corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIomZw8mywtJ8rZK-B1n2iFf4fL_38mfe39XkqAKhNe6ypbHq_LwsNKntw4SAP8tnowiARUXqrYjKK679mDEYVPIyiZ0zFzSgPUYAUtDteyRsF9seADrGaxNZABxSRdhIgrlBgk_7jxAQzLlf2XkTfVfbwYxlYtS9L356gStnfY5Cp4T3NrSW2rzZndkew-InecsIoRBICGhs_n-0IBOioN9x5RWyyEOF85bvGFOoMKVKuocw0qEch"/>
+</div>
+</div>
+</header>
+<!-- Mobile Drawer (SideNavBar equivalent) -->
+<div class="fixed inset-0 bg-black/50 z-40 hidden opacity-0" id="drawer-overlay"></div>
+<nav class="fixed left-0 top-0 h-full w-[280px] bg-on-secondary-fixed text-primary-fixed z-50 transform -translate-x-full shadow-lg flex flex-col py-sm" id="mobile-drawer">
+<!-- Drawer Header -->
+<div class="px-gutter pb-md border-b border-white/10 mb-sm">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-size: 24px;">school</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-surface">HIMASISFO</h2>
+<p class="font-label-sm text-label-sm text-secondary-fixed-dim">Admin Portal</p>
+</div>
+</div>
+<button class="absolute top-4 right-4 text-secondary-fixed-dim hover:text-white p-1" id="close-drawer-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Drawer Links -->
+<div class="flex-1 overflow-y-auto px-2 space-y-1">
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">groups</span>
+                Members
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">school</span>
+                Academic
+            </a>
+<!-- Active State -->
+<a class="bg-primary text-white rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md shadow-sm border-l-4 border-primary-fixed" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                Events
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">payments</span>
+                Finances
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+<!-- Drawer Footer -->
+<div class="px-2 pt-sm border-t border-white/10 mt-auto">
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">help</span>
+                Support
+            </a>
+<a class="text-secondary-fixed-dim hover:text-white hover:bg-white/5 transition-all rounded-lg px-4 py-3 flex items-center gap-3 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-[80px] pb-[100px] px-gutter min-h-screen bg-[#F5F5F5]">
+<div class="max-w-md mx-auto">
+<!-- Form Header context -->
+<div class="mb-md">
+<span class="inline-block px-2 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full mb-2">Events Management</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Submit Report</h2>
+<p class="font-body-sm text-body-sm text-secondary">Complete the details below to log a recent organizational event.</p>
+</div>
+<!-- Main Form Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-outline-variant p-md">
+<form action="#" class="space-y-sm" method="POST">
+<!-- Basic Info Section -->
+<div class="space-y-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-2 mb-sm">Informasi Dasar</h3>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="eventName">Nama Kegiatan <span class="text-error">*</span></label>
+<input class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors placeholder:text-secondary-fixed-dim" id="eventName" name="eventName" placeholder="e.g. Workshop Web Development" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="eventCategory">Kategori <span class="text-error">*</span></label>
+<div class="relative">
+<select class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 font-body-sm text-body-sm text-on-surface appearance-none transition-colors" id="eventCategory" name="eventCategory" required="">
+<option disabled="" selected="" value="">Pilih Kategori</option>
+<option value="academic">Akademik &amp; Pelatihan</option>
+<option value="social">Sosial &amp; Masyarakat</option>
+<option value="internal">Internal Organisasi</option>
+<option value="external">Kemitraan Eksternal</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-secondary">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="startDate">Tanggal Mulai <span class="text-error">*</span></label>
+<input class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors" id="startDate" name="startDate" required="" type="date"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="endDate">Tanggal Selesai</label>
+<input class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors" id="endDate" name="endDate" type="date"/>
+</div>
+</div>
+</div>
+<!-- Details Section -->
+<div class="space-y-sm pt-sm mt-sm border-t border-outline-variant">
+<h3 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-2 mb-sm">Detail Pelaksanaan</h3>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="location">Lokasi</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+</div>
+<input class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest pl-9 pr-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors placeholder:text-secondary-fixed-dim" id="location" name="location" placeholder="Gedung / Ruangan / Link" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="participantCount">Jumlah Peserta</label>
+<input class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors placeholder:text-secondary-fixed-dim" id="participantCount" min="0" name="participantCount" placeholder="0" type="number"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="description">Deskripsi Singkat &amp; Hasil <span class="text-error">*</span></label>
+<textarea class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors placeholder:text-secondary-fixed-dim resize-none" id="description" name="description" placeholder="Tuliskan ringkasan kegiatan dan hasil yang dicapai..." required="" rows="4"></textarea>
+</div>
+</div>
+<!-- Financials (Optional) -->
+<div class="space-y-sm pt-sm mt-sm border-t border-outline-variant">
+<h3 class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-2 mb-sm">Keuangan (Opsional)</h3>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-xs" for="budgetUsed">Total Anggaran Terpakai (Rp)</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none font-body-sm text-secondary">
+                                    Rp
+                                </div>
+<input class="input-field w-full rounded-lg border border-outline-variant bg-surface-container-lowest pl-9 pr-3 py-2 font-body-sm text-body-sm text-on-surface transition-colors placeholder:text-secondary-fixed-dim" id="budgetUsed" min="0" name="budgetUsed" placeholder="0" type="number"/>
+</div>
+</div>
+</div>
+<!-- File Upload -->
+<div class="pt-sm mt-sm border-t border-outline-variant">
+<label class="block font-label-md text-label-md text-on-surface mb-xs">Lampiran Dokumentasi</label>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-outline-variant border-dashed rounded-lg bg-surface hover:bg-surface-variant transition-colors cursor-pointer group">
+<div class="space-y-1 text-center">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors" style="font-size: 32px;">cloud_upload</span>
+<div class="flex text-sm text-on-surface-variant justify-center font-body-sm">
+<label class="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary-container focus-within:outline-none" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="font-label-sm text-label-sm text-secondary">PDF, JPG, PNG up to 10MB</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="pt-md mt-sm flex flex-col gap-3">
+<button class="w-full bg-primary hover:bg-[#4D0000] text-white font-label-md text-label-md py-3 rounded-lg shadow-sm transition-all active:scale-95 flex justify-center items-center gap-2" type="submit">
+<span class="material-symbols-outlined text-sm">save</span>
+                            Simpan Laporan
+                        </button>
+<button class="w-full bg-transparent border border-primary text-primary hover:bg-primary-fixed/20 font-label-md text-label-md py-3 rounded-lg transition-all active:scale-95" type="button">
+                            Batal
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile pattern replacing TopNavBar standard view) -->
+<nav class="fixed bottom-0 w-full h-[64px] bg-surface-container-lowest border-t border-outline-variant z-30 flex justify-around items-center px-2 pb-safe shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center w-full h-full text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-sm text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-primary transition-colors" href="#">
+<div class="px-4 py-1 bg-primary-fixed rounded-full mb-1">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<span class="font-label-sm text-[10px] font-bold">Input</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">history</span>
+<span class="font-label-sm text-[10px]">History</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-sm text-[10px]">Profile</span>
+</a>
+</nav>
+<script>
+        // Drawer Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+
+        function openDrawer() {
+            drawer.classList.add('open');
+            overlay.classList.remove('hidden');
+            // Small delay to allow display block to apply before opacity transition
+            setTimeout(() => {
+                overlay.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeDrawer() {
+            drawer.classList.remove('open');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+            }, 300); // Wait for transition to finish
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openDrawer);
+        closeDrawerBtn.addEventListener('click', closeDrawer);
+        overlay.addEventListener('click', closeDrawer);
+    </script>
+</body></html>

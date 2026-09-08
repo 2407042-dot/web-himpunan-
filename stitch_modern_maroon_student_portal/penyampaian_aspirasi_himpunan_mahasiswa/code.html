@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Penyampaian Aspirasi - OrgName</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b22b1d",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary-container": "#474746",
+                    "error-container": "#93000a",
+                    "primary": "#ffb4a8",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-secondary-container": "#b7b5b4",
+                    "secondary-fixed": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "on-tertiary": "#2f3131",
+                    "on-surface-variant": "#e2bfb9",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed": "#e2e2e2",
+                    "tertiary": "#c6c6c7",
+                    "on-secondary": "#313030",
+                    "on-tertiary-container": "#a6a7a8",
+                    "tertiary-container": "#3b3d3d",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed-variant": "#8f0f07",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed": "#410000",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#ffb4a8",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface": "#131313",
+                    "on-primary-container": "#ff8371",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "on-primary": "#690000",
+                    "primary-container": "#800000",
+                    "on-secondary-fixed-variant": "#474746",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline": "#a98984",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#5a413d",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "secondary": "#c8c6c5",
+                    "primary-fixed": "#ffdad4",
+                    "surface-variant": "#353534"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-sm": "12px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "stack-lg": "48px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Montserrat"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Montserrat"
+                    ],
+                    "button": [
+                            "Montserrat"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Montserrat"
+                    ],
+                    "headline-lg": [
+                            "Montserrat"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "72px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "button": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Custom styles for specific effects */
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .maroon-glow:hover {
+            box-shadow: 0 0 20px rgba(128, 0, 0, 0.3);
+        }
+        
+        .input-dark {
+            background-color: #0A0A0A;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e5e2e1;
+        }
+        
+        .input-dark:focus {
+            border-color: #800000;
+            outline: none;
+            box-shadow: 0 0 0 1px #800000;
+        }
+        
+        .input-dark::placeholder {
+            color: rgba(229, 226, 225, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/10 shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary tracking-tighter">OrgName</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform" href="#">Beranda</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform" href="#">Sejarah</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform" href="#">Aparatur</a>
+<a class="text-on-surface/70 hover:text-on-surface transition-colors font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform" href="#">Media &amp; Info</a>
+<a class="text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-1 after:h-1 after:bg-primary after:rounded-full font-label-md text-label-md px-3 py-2 rounded-lg hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform" href="#">Aspirasi</a>
+</div>
+<button class="bg-primary-container text-white px-4 py-2 rounded-lg font-button text-button hover:bg-primary-container/90 transition-colors hidden md:block">Hubungi Kami</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="mb-stack-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-stack-sm">Penyampaian Aspirasi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Suara Anda adalah fondasi perubahan. Sampaikan aspirasi, keluhan, atau saran Anda secara profesional melalui form di bawah ini.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Form Section -->
+<div class="lg:col-span-8">
+<div class="glass-panel rounded-xl p-6 md:p-8">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Name Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="name">Nama Lengkap</label>
+<input class="input-dark w-full rounded-lg px-4 py-3 font-body-md text-body-md transition-colors" id="name" name="name" placeholder="Masukkan nama Anda" type="text"/>
+</div>
+<!-- Student ID Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="nim">Nomor Induk Mahasiswa (NIM)</label>
+<input class="input-dark w-full rounded-lg px-4 py-3 font-body-md text-body-md transition-colors" id="nim" name="nim" placeholder="Masukkan NIM Anda" type="text"/>
+</div>
+</div>
+<!-- Category Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="category">Kategori Aspirasi</label>
+<select class="input-dark w-full rounded-lg px-4 py-3 font-body-md text-body-md transition-colors appearance-none" id="category" name="category">
+<option disabled="" selected="" value="">Pilih Kategori</option>
+<option value="akademik">Akademik &amp; Pendidikan</option>
+<option value="fasilitas">Fasilitas Kampus</option>
+<option value="kemahasiswaan">Kegiatan Kemahasiswaan</option>
+<option value="lainnya">Lainnya</option>
+</select>
+</div>
+<!-- Message Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2" for="message">Pesan Aspirasi</label>
+<textarea class="input-dark w-full rounded-lg px-4 py-3 font-body-md text-body-md transition-colors resize-none" id="message" name="message" placeholder="Tuliskan detail aspirasi, saran, atau keluhan Anda di sini..." rows="6"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="flex justify-end pt-4">
+<button class="bg-primary-container text-white px-8 py-3 rounded-lg font-button text-button hover:bg-primary-container/90 transition-all duration-300 maroon-glow flex items-center gap-2" type="button">
+<span>Kirim Aspirasi</span>
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Sidebar Info -->
+<div class="lg:col-span-4">
+<div class="glass-panel rounded-xl p-6 md:p-8 h-full sticky top-28">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+                        Proses Aspirasi
+                    </h3>
+<div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent hidden"></div>
+<ul class="space-y-6 relative border-l border-white/10 ml-3 pl-6">
+<li class="relative">
+<div class="absolute w-3 h-3 bg-primary-container rounded-full -left-[1.9rem] top-1.5 border-2 border-background"></div>
+<h4 class="font-button text-button text-on-surface mb-1">1. Penerimaan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Aspirasi Anda diterima secara rahasia dan masuk ke sistem database utama kami.</p>
+</li>
+<li class="relative">
+<div class="absolute w-3 h-3 bg-surface-container-high rounded-full -left-[1.9rem] top-1.5 border-2 border-background"></div>
+<h4 class="font-button text-button text-on-surface mb-1">2. Verifikasi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Tim kami meninjau validitas dan mengkategorikan isu untuk penanganan yang tepat.</p>
+</li>
+<li class="relative">
+<div class="absolute w-3 h-3 bg-surface-container-high rounded-full -left-[1.9rem] top-1.5 border-2 border-background"></div>
+<h4 class="font-button text-button text-on-surface mb-1">3. Tindak Lanjut</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Diskusikan dengan pihak terkait (Birokrasi Kampus, Fakultas, atau Dosen).</p>
+</li>
+<li class="relative">
+<div class="absolute w-3 h-3 bg-surface-container-high rounded-full -left-[1.9rem] top-1.5 border-2 border-background"></div>
+<h4 class="font-button text-button text-on-surface mb-1">4. Resolusi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Pembaruan status akan diinformasikan melalui email atau kanal publikasi kami.</p>
+</li>
+</ul>
+<div class="mt-8 pt-6 border-t border-white/10">
+<p class="font-label-md text-label-md text-on-surface-variant text-center">Butuh bantuan mendesak?</p>
+<a class="block text-center text-primary hover:text-primary-container transition-colors font-button text-button mt-2" href="#">Hubungi Hotline Kami</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-white/5 bg-surface-container-lowest dark:bg-surface-container-lowest shadow-none mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">OrgName</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-all duration-200 font-label-md text-label-md" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-all duration-200 font-label-md text-label-md" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-all duration-200 font-label-md text-label-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-all duration-200 font-label-md text-label-md" href="#">Contact Us</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2024 Student Organization. All Rights Reserved.</div>
+</div>
+</footer>
+</body></html>

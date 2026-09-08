@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sejarah - OrgName</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "inverse-primary": "#b22b1d",
+                            "inverse-on-surface": "#313030",
+                            "on-surface": "#e5e2e1",
+                            "on-secondary-fixed": "#1c1b1b",
+                            "on-tertiary-fixed-variant": "#454747",
+                            "secondary-container": "#474746",
+                            "error-container": "#93000a",
+                            "primary": "#ffb4a8",
+                            "tertiary-fixed-dim": "#c6c6c7",
+                            "on-secondary-container": "#b7b5b4",
+                            "secondary-fixed": "#e5e2e1",
+                            "inverse-surface": "#e5e2e1",
+                            "surface-container-low": "#1c1b1b",
+                            "on-tertiary": "#2f3131",
+                            "on-surface-variant": "#e2bfb9",
+                            "surface-container-highest": "#353534",
+                            "surface-container": "#201f1f",
+                            "on-background": "#e5e2e1",
+                            "tertiary-fixed": "#e2e2e2",
+                            "tertiary": "#c6c6c7",
+                            "on-secondary": "#313030",
+                            "on-tertiary-container": "#a6a7a8",
+                            "tertiary-container": "#3b3d3d",
+                            "secondary-fixed-dim": "#c8c6c5",
+                            "on-primary-fixed-variant": "#8f0f07",
+                            "surface-bright": "#3a3939",
+                            "on-primary-fixed": "#410000",
+                            "error": "#ffb4ab",
+                            "surface-tint": "#ffb4a8",
+                            "on-error": "#690005",
+                            "on-tertiary-fixed": "#1a1c1c",
+                            "surface": "#131313",
+                            "on-primary-container": "#ff8371",
+                            "surface-dim": "#131313",
+                            "background": "#131313",
+                            "on-primary": "#690000",
+                            "primary-container": "#800000",
+                            "on-secondary-fixed-variant": "#474746",
+                            "surface-container-lowest": "#0e0e0e",
+                            "outline": "#a98984",
+                            "on-error-container": "#ffdad6",
+                            "outline-variant": "#5a413d",
+                            "surface-container-high": "#2a2a2a",
+                            "primary-fixed-dim": "#ffb4a8",
+                            "secondary": "#c8c6c5",
+                            "primary-fixed": "#ffdad4",
+                            "surface-variant": "#353534"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                    },
+                    "spacing": {
+                            "gutter": "24px",
+                            "stack-sm": "12px",
+                            "stack-md": "24px",
+                            "container-max": "1280px",
+                            "base": "8px",
+                            "margin-desktop": "64px",
+                            "stack-lg": "48px",
+                            "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                            "headline-md": ["Montserrat"],
+                            "body-lg": ["Inter"],
+                            "display-lg": ["Montserrat"],
+                            "button": ["Montserrat"],
+                            "body-md": ["Inter"],
+                            "label-md": ["Inter"],
+                            "display-lg-mobile": ["Montserrat"],
+                            "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            box-shadow: 0 0 20px rgba(128, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface/80 border-b border-white/10 shadow-none">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary tracking-tighter">
+                OrgName
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded" href="#">Beranda</a>
+<a class="font-label-md text-label-md text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-1 after:h-1 after:bg-primary after:rounded-full hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded" href="#">Sejarah</a>
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded" href="#">Aparatur</a>
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded" href="#">Media &amp; Info</a>
+<a class="font-label-md text-label-md text-on-surface/70 hover:text-on-surface transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded" href="#">Aspirasi</a>
+</div>
+<button class="hidden md:block bg-primary-container text-on-primary font-button text-button px-6 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors">
+                Hubungi Kami
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<header class="mb-stack-lg text-center md:text-left">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-stack-sm">
+                Jejak <span class="text-primary">Langkah</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Menelusuri perjalanan panjang dedikasi, inovasi, dan kolaborasi mahasiswa dalam membangun ekosistem akademik yang unggul sejak awal mula terbentuknya organisasi.
+            </p>
+</header>
+<!-- Vision & Mission Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-32">
+<div class="glass-card rounded-xl p-8 md:col-span-2 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="visibility">visibility</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Visi</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Menjadi pionir organisasi kemahasiswaan yang berdaya saing global, mengedepankan intelektualitas, integritas, dan inovasi berbasis teknologi dalam merespons dinamika zaman, serta menjadi wadah inklusif bagi seluruh mahasiswa untuk berkembang dan berkontribusi nyata bagi masyarakat.
+                </p>
+</div>
+<div class="glass-card rounded-xl p-8 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="flag">flag</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Misi</h2>
+</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant list-disc list-inside">
+<li>Mengembangkan potensi akademik dan non-akademik.</li>
+<li>Membangun jaringan kemitraan strategis.</li>
+<li>Menyelenggarakan program kerja inovatif.</li>
+<li>Mewujudkan tata kelola organisasi yang transparan.</li>
+</ul>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="relative">
+<!-- Vertical Line -->
+<div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-container transform md:-translate-x-1/2 rounded-full"></div>
+<div class="space-y-24">
+<!-- Milestone 1 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 pl-12 md:pl-0 md:pr-12 md:text-right w-full mb-4 md:mb-0">
+<div class="glass-card rounded-xl p-6 transition-all duration-300">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2 block">2010</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Pendirian &amp; Deklarasi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Organisasi secara resmi didirikan melalui konsensus mahasiswa lintas fakultas. Sebuah langkah awal untuk menyatukan visi dalam sebuah wadah pergerakan intelektual yang terstruktur dan legal.
+                            </p>
+</div>
+</div>
+<!-- Marker -->
+<div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-primary-container transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform group-hover:bg-primary shadow-[0_0_10px_rgba(255,180,168,0.5)]"></div>
+<div class="md:w-5/12 pl-12 md:pl-12 w-full hidden md:block">
+<div class="rounded-xl overflow-hidden h-48 bg-surface-container-high relative border border-white/5">
+<div class="bg-cover bg-center w-full h-full opacity-60 hover:opacity-100 transition-opacity duration-500" data-alt="A vintage photograph styled with modern high-contrast black and maroon duotone overlay, showing a group of students in silhouette signing a foundational document in a dimly lit, grand academic hall. The aesthetic is sleek, historical yet futuristic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTsBMqyrztev5pguI4xkkLargEfVzj-bcS5fHuE7ESzHpcvJz1LeP55uhP-s6WVIqw_ABSRo-OpBI-ppAJo9Gy4xOVIkrazmazIxE77QcYg5ECOEAUwRXmcjbFP_Jo51y0-3aPa8OpEbDfJT4vnLe0b-vf7oDzs41NmN2RHGdMorqT10RRoFDa4Kzcl560R6Mors69ctD60QOssdwhzLskrJv4YnbsGi3Mxx9H0HtSemLP9txBdrFA')"></div>
+</div>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 pr-12 md:pr-12 w-full hidden md:block md:text-right">
+<div class="rounded-xl overflow-hidden h-48 bg-surface-container-high relative border border-white/5">
+<div class="bg-cover bg-center w-full h-full opacity-60 hover:opacity-100 transition-opacity duration-500" data-alt="A modern tech-focused event scene, high-key lighting with deep black shadows, showcasing an early technology symposium. Maroon accents on banners and lanyards. The aesthetic is sleek professionalism, looking like a cutting-edge tech collective gathering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEfgGEaC1rlIGxDOVD05L06rOS5bSnVh0oPvyZ_9dLZBYjfug7shfsr6p_NZX7fU5D9b8hEzZvyOEFTO2ySMaYVfJFaBAOqBfpLfgYfZ-A3aYSyo-ZyjZem25bslMH2AXWtnFwNmXdOPwMBjGb5Rm651eU2xB-3vth4IIzq2CeBnPPBQMDsso-oaf1NHrOuaW3bnexN3suuQDnGXkYl4jQveszFnKmXtPtG-2WJhxbGY5wB3ttTNgz')"></div>
+</div>
+</div>
+<!-- Marker -->
+<div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-primary-container transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform group-hover:bg-primary shadow-[0_0_10px_rgba(255,180,168,0.5)]"></div>
+<div class="md:w-5/12 pl-12 md:pl-12 w-full">
+<div class="glass-card rounded-xl p-6 transition-all duration-300">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2 block">2015</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Era Digitalisasi &amp; Ekspansi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Transformasi besar-besaran menuju tata kelola digital. Peluncuran platform internal pertama yang mengintegrasikan seluruh layanan kemahasiswaan, menandai pergeseran ke arah organisasi berbasis teknologi.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+<div class="md:w-5/12 pl-12 md:pl-0 md:pr-12 md:text-right w-full mb-4 md:mb-0">
+<div class="glass-card rounded-xl p-6 transition-all duration-300 border-l-4 border-l-primary md:border-l-0 md:border-r-4 md:border-r-primary">
+<span class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2 block">2024 (Saat Ini)</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Sinergi Global</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Mengukuhkan posisi sebagai student collective premium. Fokus pada kolaborasi internasional, riset terapan, dan pemberdayaan berkelanjutan dengan standar agensi profesional.
+                            </p>
+</div>
+</div>
+<!-- Marker -->
+<div class="absolute left-4 md:left-1/2 w-6 h-6 rounded-full bg-primary border-4 border-black transform -translate-x-1/2 z-10 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,180,168,0.8)] flex items-center justify-center">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+<div class="md:w-5/12 pl-12 md:pl-12 w-full hidden md:block">
+<div class="rounded-xl overflow-hidden h-48 bg-surface-container-high relative border border-white/5">
+<div class="bg-cover bg-center w-full h-full opacity-80 hover:opacity-100 transition-opacity duration-500" data-alt="A highly polished, cinematic shot of a modern student working on a holographic or high-tech interface in a dark, sleek environment. Deep blacks dominate the scene with vibrant maroon glow accents highlighting the futuristic technology and serious academic atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClmfjMQcQgVnlkEJDXTeFGzPEa_8oY2XLQulDyYgn3uTBeJTaUyHqkA4sy6R-h7GCu4GPeemxfEUlGT3WD02_7md3_N1bV6hLkMc7ERhFdugl1Q2TNEturM87vvsTIGF1iGiO0eQN4UuYBaGA0D_7BfrYVGvR9wU-pO8Z_AQBjN_7HHmQVW0XigMyVCWLyNjAHPBKLcQE78BtdCIH-BVIVkJnwEtQGzjRNboqzyHHTxYGUskZr8uTi')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-stack-lg border-t border-white/5 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-stack-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">
+                OrgName
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">Instagram</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">Twitter</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">LinkedIn</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors transition-all duration-200" href="#">Contact Us</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+                © 2024 Student Organization. All Rights Reserved.
+            </div>
+</div>
+</footer>
+</body></html>
